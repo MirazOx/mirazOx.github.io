@@ -1,0 +1,26 @@
+[
+  {
+    "course": "Methods of Social Research · ULAB · Fall 2025",
+    "title": "Algorithmic News Feeds and Misinformation Susceptibility — Research Proposal",
+    "desc": "Sequential explanatory mixed-methods proposal submitted for the MOSR midterm. Establishes the theoretical grounding, sampling logic, and instrument design for the ongoing Dhaka study.",
+    "grade": "A",
+    "file": "pdfs/midterm-project.pdf",
+    "file_label": "Read proposal (PDF)"
+  },
+  {
+    "course": "Communication Research · ULAB · Spring 2025",
+    "title": "Literature Review — Platform Studies and Epistemic Equity",
+    "desc": "Integrative review of the platform studies literature, with a focus on how epistemic equity has been operationalised in Global South contexts.",
+    "grade": "A",
+    "file": "pdfs/comm-research-paper.docx",
+    "file_label": "Read paper (DOCX)"
+  },
+  {
+    "course": "Data Journalism · ULAB · Spring 2025",
+    "title": "Team Data Decoder — Final Project",
+    "desc": "Collaborative data-journalism capstone. Team investigation of an open public-data source, producing a reproducible notebook and a publishable feature-length narrative.",
+    "grade": "A",
+    "file": "pdfs/team-data-decoder.pdf",
+    "file_label": "Read project (PDF)"
+  }
+]

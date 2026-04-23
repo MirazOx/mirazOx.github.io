@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>#Quickblog — Md. Miraz Hossain</title>
+<meta name="description" content="Short-form notes, quick takes, and working-in-public jottings.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="quickblog">
+
+<nav>
+  <div class="container">
+    <a class="nav-logo" href="index.html">Home</a>
+    <ul class="nav-links">
+      <li><a href="research.html">research</a></li>
+      <li><a href="projects.html">projects</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="quickblog.html" class="active">#quickblog</a></li>
+      <li><a href="academic.html">academic</a></li>
+      <li><a href="credentials.html">credentials</a></li>
+      <li><a href="services.html">services</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+    <section class="page-header">
+      <p class="page-eyebrow">#quickblog</p>
+      <h1 class="page-title">Notes, <em>quick takes</em> &amp; working in public</h1>
+      <p class="page-subtitle">A place for short-form writing — research-in-progress, half-thoughts, teaching notes, and things I don't want to lose. New posts first.</p>
+    </section>
+
+    <div class="controls">
+      <input type="text" id="search" class="search-input" placeholder="Search posts…" />
+      <select id="tag" class="select-input"><option value="">All tags</option></select>
+    </div>
+
+    <div id="blog-posts"></div>
+
+    <div class="cta-box">
+      <h3>Something to add?</h3>
+      <p>The posts here live in <code>content/blog.json</code>. Add an entry with <em>date</em>, <em>title</em>, <em>excerpt</em>, optional <em>body</em>, and <em>tags</em> — it appears automatically.</p>
+      <a href="mailto:miraz8395@gmail.com" class="hero-cta">suggest a topic</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="footer-text">© 2026 Md. Miraz Hossain · Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="about.html">about</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   mirazhossain.com — shared JS
+   Theme toggle · reveal animations · rotating tags
+   ========================================================== */
+
+// ---------- THEME ----------
+(function initTheme() {
+  const saved = localStorage.getItem('miraz-theme');
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.setAttribute('data-theme', saved);
+  }
+})();
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let next;
+  if (current === 'dark') next = 'light';
+  else if (current === 'light') next = 'dark';
+  else next = prefersDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('miraz-theme', next);
+}
+
+function injectThemeToggle() {
+  if (document.querySelector('.theme-toggle')) return;
+  const btn = document.createElement('button');
+  btn.className = 'theme-toggle';
+  btn.setAttribute('aria-label', 'Toggle dark mode');
+  btn.innerHTML = `
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"><\/path><\/svg>
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/><\/svg>`;
+  btn.addEventListener('click', toggleTheme);
+  document.body.appendChild(btn);
+}
+
+// ---------- REVEAL ON SCROLL ----------
+function initReveal() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => obs.observe(el));
+}
+// Allow async-injected content (blog posts, folder pages) to get the reveal animation.
+window.__reInitReveal = initReveal;
+
+// ---------- ROTATING TAG WIDGET ----------
+function initRotatingTags() {
+  const box = document.querySelector('.rotating-tag-box');
+  if (!box) return;
+  const items = Array.from(box.querySelectorAll('.rotating-tag-item'));
+  if (!items.length) return;
+  let idx = 0;
+  items[0].classList.add('is-active');
+  setInterval(() => {
+    const current = items[idx];
+    idx = (idx + 1) % items.length;
+    const next = items[idx];
+    current.classList.remove('is-active');
+    current.classList.add('is-leaving');
+    next.classList.add('is-active');
+    setTimeout(() => current.classList.remove('is-leaving'), 700);
+  }, 1800);
+}
+
+// ---------- LIGHTBOX (Recognition awards) ----------
+function initLightbox() {
+  const cards = document.querySelectorAll('.award-card[data-full]');
+  const box = document.getElementById('lightbox');
+  if (!cards.length || !box) return;
+  const img   = box.querySelector('.lightbox-img');
+  const cap   = box.querySelector('.lightbox-cap');
+  const close = box.querySelector('.lightbox-close');
+
+  function open(card) {
+    if (card.querySelector('.is-placeholder')) return;
+    const imgEl = card.querySelector('img');
+    if (!imgEl) return;
+    const src   = card.getAttribute('data-full');
+    const badge = card.querySelector('.award-badge');
+    const note  = card.querySelector('.award-note');
+    img.src = src;
+    img.alt = imgEl.alt || '';
+    cap.textContent = [badge && badge.textContent.trim(), note && note.textContent.trim()].filter(Boolean).join(' — ');
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBox() {
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    img.src = '';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => open(card));
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
+    });
+  });
+  close.addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
+}
+
+// ---------- INIT ----------
+document.addEventListener('DOMContentLoaded', () => {
+  injectThemeToggle();
+  initReveal();
+  initRotatingTags();
+  initLightbox();
+});
+
+</script>
+<script type="application/json" id="inline-blog-data">[{"date": "2026-04-22", "slug": "why-this-site", "title": "Why I rebuilt this site", "excerpt": "A short note on what changed, what's here, and what's coming.", "body": "The original single-page portfolio was fine for a bio, but it couldn't hold anything that wasn't a bullet point. This version makes room for the work itself \u2014 214 bylines, 72 certifications, three academic papers, the services I quietly run on the side, and a blog for the things that don't fit anywhere. More soon.", "tags": ["meta", "building"]}, {"date": "2026-04-15", "slug": "fieldnotes-dhaka-2026", "title": "Fieldnotes: Dhaka, April 2026", "excerpt": "Early signals from the pilot survey \u2014 a handful of things I didn't expect.", "body": "Three things from the first 40 responses. (1) Students report using Facebook <em>less<\/em> than I'd assumed, but trust what they see on it more than what they see on YouTube \u2014 interesting inversion. (2) Age 20\u201322 is the inflection point: respondents older than that show dramatically better lateral-reading habits. (3) Self-reported media literacy barely correlates with the behavioural tasks I'm running. Too early to say anything publishable, but the instrument is holding.", "tags": ["research", "fieldwork", "Dhaka"]}, {"date": "2026-03-30", "slug": "teaching-fossilized-errors", "title": "Teaching notes: fossilized errors", "excerpt": "What I'm trying with two batches of first-year Academic English students.", "body": "\"Fossilized error\" is a clunky term but a useful one \u2014 structural mistakes that have survived years of schooling because no one caught them in time. My current experiment: each student maintains an error log for the first four weeks, and we spend ten minutes per session on shared patterns. Early impression: the log is doing more than my feedback ever did.", "tags": ["teaching", "ULAB", "writing"]}]</script>
+<script>
+let POSTS = [];
+Promise.resolve(JSON.parse(document.getElementById('inline-blog-data').textContent)).then(data => {
+  POSTS = data;
+  // populate tag select
+  const tags = [...new Set(data.flatMap(p => p.tags || []))].sort();
+  const sel = document.getElementById('tag');
+  tags.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; sel.appendChild(o); });
+  render();
+}).catch(() => {
+  document.getElementById('blog-posts').innerHTML =
+    '<p style="color:var(--text3);font-family:DM Mono,monospace;font-size:12px;">Posts load when the site is served over HTTP.</p>';
+});
+
+function render() {
+  const q = (document.getElementById('search').value || '').toLowerCase();
+  const t = document.getElementById('tag').value;
+  const out = POSTS.filter(p => {
+    if (q && !(`${p.title} ${p.excerpt||''} ${p.body||''}`.toLowerCase().includes(q))) return false;
+    if (t && !(p.tags || []).includes(t)) return false;
+    return true;
+  }).sort((a,b) => (b.date||'').localeCompare(a.date||''));
+
+  document.getElementById('blog-posts').innerHTML = out.length ? out.map(p => `
+    <article class="blog-post">
+      <p class="blog-post-date">${p.date || '—'}</p>
+      <h2 class="blog-post-title">${p.slug ? `<a href="#${p.slug}">${p.title}</a>` : p.title}</h2>
+      <p class="blog-post-excerpt">${p.excerpt || ''}</p>
+      ${p.body ? `<details style="margin-top:0.5rem;"><summary style="cursor:pointer;font-family:'DM Mono',monospace;font-size:11px;color:var(--accent-teal);">read more ↓</summary><div style="margin-top:0.75rem;font-size:14px;color:var(--text2);line-height:1.8;">${p.body}</div></details>` : ''}
+      ${(p.tags||[]).length ? `<div class="blog-post-tags">${p.tags.map(t => `<span class="research-tag">#${t}</span>`).join('')}</div>` : ''}
+    </article>
+  `).join('') : '<p style="color:var(--text3);padding:2rem 0;">No posts match that filter.</p>';
+}
+
+['search','tag'].forEach(id => {
+  document.getElementById(id).addEventListener('input', render);
+  document.getElementById(id).addEventListener('change', render);
+});
+</script>
+</body>
+</html>

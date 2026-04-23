@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Md. Miraz Hossain</title>
+<meta name="description" content="Data journalism and research projects by Md. Miraz Hossain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="projects">
+
+<nav>
+  <div class="container-wide">
+    <a class="nav-logo" href="index.html">Home</a>
+    <ul class="nav-links">
+      <li><a href="research.html">research</a></li>
+      <li><a href="projects.html" class="active">projects</a></li>
+      <li><a href="writing.html">writing</a></li>
+      <li><a href="quickblog.html">#quickblog</a></li>
+      <li><a href="academic.html">academic</a></li>
+      <li><a href="credentials.html">credentials</a></li>
+      <li><a href="services.html">services</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container-wide">
+
+    <section class="page-header">
+      <p class="page-eyebrow">Projects · Data &amp; visualisation</p>
+      <h1 class="page-title">Interactive <em>projects</em> &amp; data work</h1>
+      <p class="page-subtitle">A growing portfolio of data-journalism and research visualisations. Below, the flagship piece: a four-year timeline of my own published features, reconstructed from raw byline data.</p>
+    </section>
+
+    <!-- FLAGSHIP PROJECT -->
+    <article class="project-card reveal" style="padding: 0; overflow: hidden;">
+      <div style="padding: 1.75rem 1.75rem 0.5rem;">
+        <div class="project-top">
+          <span class="project-type">Data journalism · Self · 2026</span>
+          <span class="badge done">live</span>
+        </div>
+        <h2 class="project-title" style="font-size: 24px;">Four years of features — a byline, visualised</h2>
+        <p class="project-desc">Every piece I've published between Feb 2022 and Apr 2026 — parsed from raw byline data, aggregated by month, coloured by outlet. Hover the bars to see exact counts. Click a year to filter.</p>
+      </div>
+
+      <!-- Summary stats -->
+      <div class="chart-summary" style="padding: 0 1.75rem;">
+        <div class="stat-card">
+          <div class="stat-value" id="stat-total">—</div>
+          <div class="stat-label">Total pieces</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-months">—</div>
+          <div class="stat-label">Active months</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-peak">—</div>
+          <div class="stat-label">Peak month</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value" id="stat-avg">—</div>
+          <div class="stat-label">Avg / active mo.</div>
+        </div>
+      </div>
+
+      <!-- Year filter pills -->
+      <div style="padding: 1rem 1.75rem 0; display: flex; gap: 0.4rem; flex-wrap: wrap;" id="year-pills"></div>
+
+      <!-- Chart -->
+      <div style="padding: 0 1.75rem 1rem; position: relative;">
+        <div class="chart-wrap">
+          <svg id="chart-svg" viewBox="0 0 900 280" preserveAspectRatio="none"></svg>
+          <div class="chart-tooltip" id="chart-tooltip"></div>
+        </div>
+        <div class="chart-legend">
+          <span><span class="legend-dot" style="background:#0f766e"></span>The Business Standard</span>
+          <span><span class="legend-dot" style="background:#b45309"></span>Netra News</span>
+        </div>
+      </div>
+
+      <div style="padding: 0 1.75rem 1.75rem; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); letter-spacing: 0.04em;">
+        Data: 214 byline entries · aggregated monthly · SVG rendered live from <code>content/articles.json</code>
+      </div>
+    </article>
+
+    <!-- PLACEHOLDER PROJECTS -->
+    <div class="reveal" style="margin-top: 3rem;">
+      <div class="section-header">
+        <h2 class="section-title">Upcoming</h2>
+        <span class="section-meta">in the pipeline</span>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-type">OSINT · geospatial</span>
+          <span class="badge planned">planned · 2026</span>
+        </div>
+        <h3 class="project-title">Dhaka protest timeline (July 2024)</h3>
+        <p class="project-desc">A geospatial reconstruction of the July 2024 protest weeks in Dhaka, built from verified social-media footage, eyewitness accounts, and public mapping data. Interactive map + scrollytelling narrative.</p>
+        <div class="project-tags">
+          <span class="project-tag">OSINT</span>
+          <span class="project-tag">geospatial</span>
+          <span class="project-tag">scrollytelling</span>
+          <span class="project-tag">Bangladesh</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-type">Platform audit · data</span>
+          <span class="badge planned">planned · 2026</span>
+        </div>
+        <h3 class="project-title">SAALWatch: South Asian Algorithmic Literacy audit</h3>
+        <p class="project-desc">A pilot platform-audit framework for South Asian newsrooms. Each audit focuses on one event and one platform, combining scraped data, manual coding, and replication-ready code published on GitHub.</p>
+        <div class="project-tags">
+          <span class="project-tag">platform audit</span>
+          <span class="project-tag">reproducible</span>
+          <span class="project-tag">open source</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-top">
+          <span class="project-type">Text analysis · NLP</span>
+          <span class="badge planned">idea</span>
+        </div>
+        <h3 class="project-title">Bangla headline sentiment over a decade</h3>
+        <p class="project-desc">Sentiment and framing trends in English-language Bangla newspaper headlines, 2015–2025. Intended as both a research paper and an explorable web artifact.</p>
+        <div class="project-tags">
+          <span class="project-tag">NLP</span>
+          <span class="project-tag">framing</span>
+          <span class="project-tag">longitudinal</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-box">
+      <h3>Collaborating on a data piece?</h3>
+      <p>Open to co-reporting, reproducible analysis help, and platform audits.</p>
+      <a href="mailto:miraz8395@gmail.com" class="hero-cta">get in touch →</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <p class="footer-text">© 2026 Md. Miraz Hossain · Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="about.html">about</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   mirazhossain.com — shared JS
+   Theme toggle · reveal animations · rotating tags
+   ========================================================== */
+
+// ---------- THEME ----------
+(function initTheme() {
+  const saved = localStorage.getItem('miraz-theme');
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.setAttribute('data-theme', saved);
+  }
+})();
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let next;
+  if (current === 'dark') next = 'light';
+  else if (current === 'light') next = 'dark';
+  else next = prefersDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('miraz-theme', next);
+}
+
+function injectThemeToggle() {
+  if (document.querySelector('.theme-toggle')) return;
+  const btn = document.createElement('button');
+  btn.className = 'theme-toggle';
+  btn.setAttribute('aria-label', 'Toggle dark mode');
+  btn.innerHTML = `
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"><\/path><\/svg>
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/><\/svg>`;
+  btn.addEventListener('click', toggleTheme);
+  document.body.appendChild(btn);
+}
+
+// ---------- REVEAL ON SCROLL ----------
+function initReveal() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => obs.observe(el));
+}
+// Allow async-injected content (blog posts, folder pages) to get the reveal animation.
+window.__reInitReveal = initReveal;
+
+// ---------- ROTATING TAG WIDGET ----------
+function initRotatingTags() {
+  const box = document.querySelector('.rotating-tag-box');
+  if (!box) return;
+  const items = Array.from(box.querySelectorAll('.rotating-tag-item'));
+  if (!items.length) return;
+  let idx = 0;
+  items[0].classList.add('is-active');
+  setInterval(() => {
+    const current = items[idx];
+    idx = (idx + 1) % items.length;
+    const next = items[idx];
+    current.classList.remove('is-active');
+    current.classList.add('is-leaving');
+    next.classList.add('is-active');
+    setTimeout(() => current.classList.remove('is-leaving'), 700);
+  }, 1800);
+}
+
+// ---------- LIGHTBOX (Recognition awards) ----------
+function initLightbox() {
+  const cards = document.querySelectorAll('.award-card[data-full]');
+  const box = document.getElementById('lightbox');
+  if (!cards.length || !box) return;
+  const img   = box.querySelector('.lightbox-img');
+  const cap   = box.querySelector('.lightbox-cap');
+  const close = box.querySelector('.lightbox-close');
+
+  function open(card) {
+    if (card.querySelector('.is-placeholder')) return;
+    const imgEl = card.querySelector('img');
+    if (!imgEl) return;
+    const src   = card.getAttribute('data-full');
+    const badge = card.querySelector('.award-badge');
+    const note  = card.querySelector('.award-note');
+    img.src = src;
+    img.alt = imgEl.alt || '';
+    cap.textContent = [badge && badge.textContent.trim(), note && note.textContent.trim()].filter(Boolean).join(' — ');
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBox() {
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    img.src = '';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => open(card));
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
+    });
+  });
+  close.addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
+}
+
+// ---------- INIT ----------
+document.addEventListener('DOMContentLoaded', () => {
+  injectThemeToggle();
+  initReveal();
+  initRotatingTags();
+  initLightbox();
+});
+
+</script>
+<script type="application/json" id="inline-timeline-data">[{"month": "2022-02", "tbs": 2, "netra": 0}, {"month": "2022-03", "tbs": 2, "netra": 0}, {"month": "2022-07", "tbs": 3, "netra": 0}, {"month": "2022-08", "tbs": 1, "netra": 0}, {"month": "2022-09", "tbs": 4, "netra": 0}, {"month": "2022-10", "tbs": 4, "netra": 0}, {"month": "2022-11", "tbs": 4, "netra": 0}, {"month": "2022-12", "tbs": 7, "netra": 0}, {"month": "2023-01", "tbs": 7, "netra": 0}, {"month": "2023-02", "tbs": 6, "netra": 0}, {"month": "2023-03", "tbs": 4, "netra": 0}, {"month": "2023-04", "tbs": 8, "netra": 0}, {"month": "2023-05", "tbs": 4, "netra": 0}, {"month": "2023-06", "tbs": 3, "netra": 0}, {"month": "2023-07", "tbs": 9, "netra": 0}, {"month": "2023-08", "tbs": 7, "netra": 0}, {"month": "2023-09", "tbs": 7, "netra": 0}, {"month": "2023-10", "tbs": 11, "netra": 0}, {"month": "2023-11", "tbs": 9, "netra": 0}, {"month": "2023-12", "tbs": 7, "netra": 0}, {"month": "2024-01", "tbs": 5, "netra": 2}, {"month": "2024-02", "tbs": 5, "netra": 0}, {"month": "2024-03", "tbs": 3, "netra": 0}, {"month": "2024-04", "tbs": 7, "netra": 0}, {"month": "2024-05", "tbs": 10, "netra": 0}, {"month": "2024-06", "tbs": 7, "netra": 0}, {"month": "2024-07", "tbs": 8, "netra": 0}, {"month": "2024-08", "tbs": 11, "netra": 0}, {"month": "2024-09", "tbs": 6, "netra": 0}, {"month": "2024-10", "tbs": 9, "netra": 0}, {"month": "2024-11", "tbs": 8, "netra": 0}, {"month": "2024-12", "tbs": 1, "netra": 0}, {"month": "2025-01", "tbs": 0, "netra": 2}, {"month": "2026-01", "tbs": 4, "netra": 0}, {"month": "2026-02", "tbs": 3, "netra": 0}, {"month": "2026-03", "tbs": 4, "netra": 0}, {"month": "2026-04", "tbs": 5, "netra": 0}]</script>
+<script>
+/* ---------------- Interactive byline chart ----------------
+   Renders a stacked bar chart from content/timeline.json.
+   Pure SVG, no external libs. Hover = tooltip. Click year pill = filter. */
+
+const svg = document.getElementById('chart-svg');
+const tip = document.getElementById('chart-tooltip');
+let DATA = [], ACTIVE_YEAR = null;
+
+Promise.resolve(JSON.parse(document.getElementById('inline-timeline-data').textContent)).then(data => {
+  DATA = data;
+  const years = [...new Set(data.map(d => d.month.slice(0,4)))].sort();
+  const pillBox = document.getElementById('year-pills');
+  pillBox.innerHTML = ['all', ...years].map(y => `<button class="hero-cta" data-year="${y}" style="margin:0;">${y}</button>`).join('');
+  pillBox.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    const y = b.dataset.year;
+    ACTIVE_YEAR = (y === 'all') ? null : y;
+    pillBox.querySelectorAll('button').forEach(x => x.style.borderColor = '');
+    b.style.borderColor = 'var(--accent-teal)';
+    render();
+  }));
+  // default active
+  pillBox.querySelector('[data-year="all"]').style.borderColor = 'var(--accent-teal)';
+  render();
+  updateStats(data);
+});
+
+function updateStats(all) {
+  const totalT = all.reduce((s,d) => s+d.tbs, 0);
+  const totalN = all.reduce((s,d) => s+d.netra, 0);
+  const total = totalT + totalN;
+  document.getElementById('stat-total').textContent = total;
+  document.getElementById('stat-months').textContent = all.length;
+  const peak = all.reduce((p,d) => (d.tbs+d.netra > (p.tbs+p.netra||0) ? d : p), {});
+  document.getElementById('stat-peak').textContent = peak.month || '—';
+  document.getElementById('stat-avg').textContent = all.length ? (total/all.length).toFixed(1) : '—';
+}
+
+function render() {
+  svg.innerHTML = '';
+  const filtered = ACTIVE_YEAR ? DATA.filter(d => d.month.startsWith(ACTIVE_YEAR)) : DATA;
+
+  const W = 900, H = 280, PAD_L = 40, PAD_R = 12, PAD_T = 12, PAD_B = 40;
+  const plotW = W - PAD_L - PAD_R;
+  const plotH = H - PAD_T - PAD_B;
+  const maxVal = Math.max(...filtered.map(d => d.tbs + d.netra), 1);
+
+  // Gridlines + y-axis labels
+  for (let i = 0; i <= 4; i++) {
+    const y = PAD_T + (plotH * i / 4);
+    const val = Math.round(maxVal * (1 - i/4));
+    svg.insertAdjacentHTML('beforeend',
+      `<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="currentColor" stroke-opacity="0.08" stroke-width="0.5"/>
+       <text x="${PAD_L-6}" y="${y+3}" text-anchor="end" font-family="DM Mono, monospace" font-size="9" fill="currentColor" opacity="0.4">${val}</text>`);
+  }
+
+  const barW = plotW / filtered.length;
+  const gap = Math.min(barW * 0.18, 3);
+
+  filtered.forEach((d, i) => {
+    const x = PAD_L + i * barW + gap/2;
+    const w = Math.max(barW - gap, 1);
+    const totalV = d.tbs + d.netra;
+    const totalH = (totalV / maxVal) * plotH;
+    const tbsH = (d.tbs / maxVal) * plotH;
+    const netraH = (d.netra / maxVal) * plotH;
+    const baseY = PAD_T + plotH;
+
+    // TBS bar (bottom)
+    svg.insertAdjacentHTML('beforeend',
+      `<rect x="${x}" y="${baseY - tbsH}" width="${w}" height="${tbsH}" fill="#0f766e"
+         data-month="${d.month}" data-tbs="${d.tbs}" data-netra="${d.netra}" style="cursor:pointer;transition:opacity 0.15s;" opacity="0.9"/>`);
+    // Netra bar (top)
+    if (d.netra > 0) {
+      svg.insertAdjacentHTML('beforeend',
+        `<rect x="${x}" y="${baseY - tbsH - netraH}" width="${w}" height="${netraH}" fill="#b45309"
+          data-month="${d.month}" data-tbs="${d.tbs}" data-netra="${d.netra}" style="cursor:pointer;transition:opacity 0.15s;" opacity="0.9"/>`);
+    }
+
+    // Year labels on first month of each year
+    if (d.month.endsWith('-01') || i === 0) {
+      svg.insertAdjacentHTML('beforeend',
+        `<text x="${x + w/2}" y="${H - 12}" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="currentColor" opacity="0.5">${d.month.slice(0,4)}</text>`);
+    }
+  });
+
+  // Hover interactions
+  svg.querySelectorAll('rect').forEach(r => {
+    r.addEventListener('mouseenter', (e) => {
+      r.setAttribute('opacity', '1');
+      const m = r.dataset.month, t = r.dataset.tbs, n = r.dataset.netra;
+      tip.innerHTML = `<strong style="font-family:'DM Serif Display',serif;font-size:13px;">${m}</strong><br>TBS: ${t} &nbsp;·&nbsp; Netra: ${n}<br><span style="color:var(--accent-teal)">total: ${parseInt(t)+parseInt(n)}</span>`;
+      tip.classList.add('is-visible');
+    });
+    r.addEventListener('mousemove', (e) => {
+      const wrap = svg.parentElement.getBoundingClientRect();
+      tip.style.left = (e.clientX - wrap.left + 12) + 'px';
+      tip.style.top  = (e.clientY - wrap.top - 40) + 'px';
+    });
+    r.addEventListener('mouseleave', () => {
+      r.setAttribute('opacity', '0.9');
+      tip.classList.remove('is-visible');
+    });
+  });
+}
+</script>
+</body>
+</html>

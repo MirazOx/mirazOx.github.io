@@ -1,0 +1,46 @@
+[
+  {
+    "title": "EN ↔ BN Translation",
+    "price": "from USD 0.06 / word",
+    "desc": "Development-sector, governance, and policy translation with strong domain fluency. Registered World Bank vendor; regular translator for The Business Standard source documents and NGO reports.",
+    "includes": [
+      "Reports, briefs, and policy documents (EN ⇄ BN)",
+      "Source statements, testimony transcripts, and verified quotes",
+      "Sensitive editorial material (NDA on request)",
+      "Turnaround: 1,500–2,000 words per working day"
+    ]
+  },
+  {
+    "title": "SOP & Motivation Letter Editing",
+    "price": "from USD 40 / document",
+    "desc": "Structural and line-level editing of graduate application documents. Informed by 500+ student consultations at SI-UK Bangladesh and ongoing independent advising for applicants to the UK, EU, and North American universities.",
+    "includes": [
+      "Two rounds of structural feedback",
+      "Line-by-line language editing",
+      "Programme-specific fit audit (Oxford, LSE, Harvard, Ivy+, Russell Group)",
+      "Turnaround: 3–5 working days per round"
+    ]
+  },
+  {
+    "title": "Education Consulting",
+    "price": "from USD 60 / hour",
+    "desc": "One-on-one advising on undergraduate and postgraduate applications — programme shortlisting, profile strategy, scholarship positioning, and timeline planning.",
+    "includes": [
+      "60-minute discovery call + written action plan",
+      "Programme shortlist with fit rationale",
+      "Scholarship mapping (Chevening, Clarendon, Commonwealth, DAAD, Fulbright, etc.)",
+      "Referee brief and timeline template"
+    ]
+  },
+  {
+    "title": "Academic Writing Coaching",
+    "price": "from USD 50 / hour",
+    "desc": "Coaching for undergraduate and early-graduate writers on academic structure, argumentation, and the fossilised errors that most often undercut South Asian applicants to Western programmes.",
+    "includes": [
+      "Live editing sessions (online)",
+      "Targeted exercises for recurring errors",
+      "Writing diagnostic report",
+      "Optional: 4-week programme (weekly 60-min sessions + written feedback)"
+    ]
+  }
+]

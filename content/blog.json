@@ -1,0 +1,26 @@
+[
+  {
+    "date": "2026-04-22",
+    "slug": "why-this-site",
+    "title": "Why I rebuilt this site",
+    "excerpt": "A short note on what changed, what's here, and what's coming.",
+    "body": "The original single-page portfolio was fine for a bio, but it couldn't hold anything that wasn't a bullet point. This version makes room for the work itself — 214 bylines, 72 certifications, three academic papers, the services I quietly run on the side, and a blog for the things that don't fit anywhere. More soon.",
+    "tags": ["meta", "building"]
+  },
+  {
+    "date": "2026-04-15",
+    "slug": "fieldnotes-dhaka-2026",
+    "title": "Fieldnotes: Dhaka, April 2026",
+    "excerpt": "Early signals from the pilot survey — a handful of things I didn't expect.",
+    "body": "Three things from the first 40 responses. (1) Students report using Facebook <em>less</em> than I'd assumed, but trust what they see on it more than what they see on YouTube — interesting inversion. (2) Age 20–22 is the inflection point: respondents older than that show dramatically better lateral-reading habits. (3) Self-reported media literacy barely correlates with the behavioural tasks I'm running. Too early to say anything publishable, but the instrument is holding.",
+    "tags": ["research", "fieldwork", "Dhaka"]
+  },
+  {
+    "date": "2026-03-30",
+    "slug": "teaching-fossilized-errors",
+    "title": "Teaching notes: fossilized errors",
+    "excerpt": "What I'm trying with two batches of first-year Academic English students.",
+    "body": "\"Fossilized error\" is a clunky term but a useful one — structural mistakes that have survived years of schooling because no one caught them in time. My current experiment: each student maintains an error log for the first four weeks, and we spend ten minutes per session on shared patterns. Early impression: the log is doing more than my feedback ever did.",
+    "tags": ["teaching", "ULAB", "writing"]
+  }
+]

@@ -1,0 +1,190 @@
+{
+  "literature": {
+    "slug": "literature",
+    "icon": "📚",
+    "title": "Literature & narrative theory",
+    "subtitle": "On why we read, and why the stories we tell each other matter.",
+    "intro": "I came to media studies through literature. My undergraduate years at the University of Dhaka were spent inside English departments and little magazines, reading postcolonial fiction and narrative theory. This folder holds the books, essays, and memories that still shape how I think about truth, narrative, and attention.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Reading now",
+        "items": [
+          { "text": "Rebecca Solnit — <em>A Field Guide to Getting Lost</em>", "meta": "Essays · 2026" },
+          { "text": "Italo Calvino — <em>Six Memos for the Next Millennium</em>", "meta": "Revisiting · Lightness & Quickness" },
+          { "text": "Maria Popova — <em>Figuring</em>", "meta": "Slow read since February" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "A memory",
+        "body": "2022. Presiding over the English Department Art and Literary Club at Dhaka University. We organised a weekly <em>chai o kobita</em> reading circle — Bangla poems in one hand, tea-stained photocopies of Seamus Heaney in the other. I learned more about cadence and silence in those evenings than in any seminar."
+      },
+      {
+        "kind": "notes",
+        "title": "Essays I keep returning to",
+        "items": [
+          { "text": "Zadie Smith — <em>Fail Better</em>", "meta": "The Guardian, 2007" },
+          { "text": "Amitav Ghosh — <em>The Great Derangement</em>", "meta": "On climate and the failure of literary imagination" },
+          { "text": "John Berger — <em>Ways of Seeing</em>, Ch. 1", "meta": "Still the best 15 minutes on the politics of the image" }
+        ]
+      }
+    ]
+  },
+  "spanish": {
+    "slug": "spanish",
+    "icon": "🌍",
+    "title": "Spanish & language learning",
+    "subtitle": "Currently A2, aiming for B1 by end of 2026.",
+    "intro": "I fell in love with Spanish late — through Bolaño, through Almodóvar, through a trip I haven't taken yet. Tracking my progress honestly, including the plateaus.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Current practice",
+        "items": [
+          { "text": "News in Slow Spanish — Intermediate", "meta": "3 episodes a week" },
+          { "text": "Anki — 1,200-card personal deck", "meta": "~20 min/day" },
+          { "text": "Language exchange on Tandem — Buenos Aires", "meta": "Weekly 30 min" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "Why Spanish",
+        "body": "The short answer: I want to read <em>2666</em> in the original Spanish before I turn 30. The longer answer involves a Colombian journalist I interviewed in 2024 whose phrasing in English was exquisite but whose Spanish — I could tell from a single voice note — was a whole other octave. I wanted to hear her properly."
+      },
+      {
+        "kind": "notes",
+        "title": "Things I've written about language",
+        "items": [
+          { "text": "Fossilized errors and fluency illusions", "meta": "Teaching notes · Quickblog" },
+          { "text": "Bangla → English → Spanish: what transfers", "meta": "Draft · coming soon" }
+        ]
+      }
+    ]
+  },
+  "film": {
+    "slug": "film",
+    "icon": "🎬",
+    "title": "Film aesthetics",
+    "subtitle": "On cinema as a way of looking, not just watching.",
+    "intro": "Film has been my second education. I keep a running log of what I watch and what it taught me about framing, pacing, and truth.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Recent watches",
+        "items": [
+          { "text": "<em>Perfect Days</em> — Wim Wenders (2023)", "meta": "Tokyo · on noticing" },
+          { "text": "<em>Aftersun</em> — Charlotte Wells (2022)", "meta": "Memory, grain, video" },
+          { "text": "<em>Matir Moina</em> — Tareque Masud (2002)", "meta": "Re-watch · always" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "The frame that changed me",
+        "body": "Satyajit Ray's <em>Pather Panchali</em> — the scene where Apu and Durga see the train cut across the kaash flowers. I was fourteen, watching on a borrowed DVD with a scratched surface. The screen would stutter every few frames. Somehow that made it more real. It was the first time I understood that cinema could be a way of remembering things that had not yet happened."
+      },
+      {
+        "kind": "notes",
+        "title": "Writing about film",
+        "items": [
+          { "text": "TBS feature — On Ruben Östlund and the comedy of inequality", "meta": "2024" },
+          { "text": "Notebook — staircase shots in Bangla cinema", "meta": "Unpublished, ongoing" }
+        ]
+      }
+    ]
+  },
+  "photography": {
+    "slug": "photography",
+    "icon": "📷",
+    "title": "Photography & travel",
+    "subtitle": "Quiet frames from the places I get to stand still in.",
+    "intro": "I carry a Fujifilm X100V everywhere. Most of what I shoot I never publish. This folder is for the few I come back to — and for the trips behind them.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Recent trips",
+        "items": [
+          { "text": "Oxford, UK — Nov 2025", "meta": "Saïd Business School · UNESCO programme" },
+          { "text": "Sylhet, Bangladesh — Feb 2026", "meta": "Tea estate fieldwork, 3 days" },
+          { "text": "Kathmandu, Nepal — Dec 2024", "meta": "SANJ conference" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "A photograph I haven't shared",
+        "body": "A boy sleeping on a stack of newspapers outside the Paltan press market, 4:30 AM, November 2023. I was on an assignment about night-shift printers. I took one frame and put the camera down. It felt rude to take a second. Sometimes the ethics of the picture you don't take is more interesting than the one you do."
+      },
+      {
+        "kind": "notes",
+        "title": "Kit & approach",
+        "items": [
+          { "text": "Fujifilm X100V · 35mm equivalent · always", "meta": "One camera, one focal length" },
+          { "text": "Classic Chrome profile, no edits", "meta": "Discipline > flexibility" },
+          { "text": "Print contact sheets every quarter", "meta": "A4, matte, binder" }
+        ]
+      }
+    ]
+  },
+  "community": {
+    "slug": "community",
+    "icon": "🏫",
+    "title": "Community education",
+    "subtitle": "Teaching, translating, and passing things along.",
+    "intro": "Some of the most meaningful work I've done happens outside the newsroom — counselling students, editing SOPs for free, running OSINT workshops for fact-checkers. This folder gathers those threads.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Ongoing",
+        "items": [
+          { "text": "<em>Tools for Journalists</em> — open OSINT resource hub", "meta": "Founded May 2025" },
+          { "text": "Academic English — ULAB CLS", "meta": "Two undergraduate cohorts" },
+          { "text": "Free SOP editing — UK applicants", "meta": "~50 students/year" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "Why I do this",
+        "body": "In 2019, a junior from my village in Kishoreganj showed me his IELTS speaking practice recording. He had memorised every answer word-for-word. His accent was perfect. His confidence was a performance. I realised most of our education system rewards that performance. So I started spending evenings helping students actually think in English rather than recite in it. That habit has never really stopped."
+      },
+      {
+        "kind": "notes",
+        "title": "Workshops & talks",
+        "items": [
+          { "text": "OSINT for newsrooms — 300+ journalists trained", "meta": "2023–2026 · Dhaka, Khulna, Chattogram" },
+          { "text": "Verification basics — BBC Media Action alumni", "meta": "Guest session · 2025" }
+        ]
+      }
+    ]
+  },
+  "philosophy": {
+    "slug": "philosophy",
+    "icon": "🧩",
+    "title": "Philosophy & ethics",
+    "subtitle": "The slow questions behind the fast news cycle.",
+    "intro": "Journalism throws up ethical puzzles every week. This folder is where I try to sit with them properly — in conversation with epistemology, ethics of AI, and the Bengali humanist tradition.",
+    "sections": [
+      {
+        "kind": "reading-now",
+        "title": "Thinking about",
+        "items": [
+          { "text": "Miranda Fricker — <em>Epistemic Injustice</em>", "meta": "Re-reading · testimonial injustice" },
+          { "text": "Shannon Vallor — <em>Technology and the Virtues</em>", "meta": "For the algorithm paper" },
+          { "text": "Rabindranath Tagore — <em>The Religion of Man</em>", "meta": "Because I always come back" }
+        ]
+      },
+      {
+        "kind": "memory",
+        "title": "The question I keep failing to answer",
+        "body": "Is it ethical to publish a verified story if you know the algorithm will only amplify the first, most inflammatory paragraph? I've sat with this since 2023. It shapes how I now structure leads. It has not made me a faster writer. It has, I hope, made me a more honest one."
+      },
+      {
+        "kind": "notes",
+        "title": "Writing in progress",
+        "items": [
+          { "text": "Algorithmic epistemic injustice in South Asian feeds", "meta": "Working paper · Fricker + Bhaskar" },
+          { "text": "On the virtue of slowness in investigative work", "meta": "Essay draft" }
+        ]
+      }
+    ]
+  }
+}

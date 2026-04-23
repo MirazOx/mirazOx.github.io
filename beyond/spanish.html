@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spanish & language learning — Beyond the work · Md. Miraz Hossain</title>
+<meta name="description" content="Currently A2, aiming for B1 by end of 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body data-page="beyond" data-slug="spanish">
+
+<nav>
+  <div class="container">
+    <a class="nav-logo" href="../index.html">Home</a>
+    <ul class="nav-links">
+      <li><a href="../research.html">research</a></li>
+      <li><a href="../projects.html">projects</a></li>
+      <li><a href="../writing.html">writing</a></li>
+      <li><a href="../quickblog.html">#quickblog</a></li>
+      <li><a href="../academic.html">academic</a></li>
+      <li><a href="../credentials.html">credentials</a></li>
+      <li><a href="../services.html">services</a></li>
+      <li><a href="../about.html">about</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+    <p class="breadcrumb"><a href="../index.html">Home</a> <span>&rarr;</span> <a href="../index.html#beyond">Beyond the work</a> <span>&rarr;</span> <span id="bc-slug">&hellip;</span></p>
+    <section class="page-header beyond-header" id="beyond-header">
+      <p class="page-eyebrow"><span class="beyond-emoji" id="b-icon">🌍</span> <span id="b-kicker">beyond the work</span></p>
+      <h1 class="page-title" id="b-title">Loading&hellip;</h1>
+      <p class="page-subtitle" id="b-subtitle"></p>
+    </section>
+    <section class="beyond-intro reveal">
+      <p id="b-intro"></p>
+    </section>
+    <div id="b-sections" class="beyond-sections"></div>
+    <div class="cta-box" style="margin-top:3rem;">
+      <h3>Add to this folder</h3>
+      <p>This page reads from <code>content/beyond.json</code>. Edit the <em>spanish</em> entry to add notes or memories &mdash; they render automatically.</p>
+      <a href="../index.html#beyond" class="hero-cta">&larr; back to Beyond the work</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p class="footer-text">&copy; 2026 Md. Miraz Hossain &middot; Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="../about.html">about</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ==========================================================
+   mirazhossain.com — shared JS
+   Theme toggle · reveal animations · rotating tags
+   ========================================================== */
+
+// ---------- THEME ----------
+(function initTheme() {
+  const saved = localStorage.getItem('miraz-theme');
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.setAttribute('data-theme', saved);
+  }
+})();
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let next;
+  if (current === 'dark') next = 'light';
+  else if (current === 'light') next = 'dark';
+  else next = prefersDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('miraz-theme', next);
+}
+
+function injectThemeToggle() {
+  if (document.querySelector('.theme-toggle')) return;
+  const btn = document.createElement('button');
+  btn.className = 'theme-toggle';
+  btn.setAttribute('aria-label', 'Toggle dark mode');
+  btn.innerHTML = `
+    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"><\/path><\/svg>
+    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="4.93" y1="4.93" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.07" y2="19.07"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.93" y1="19.07" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.07" y2="4.93"/><\/svg>`;
+  btn.addEventListener('click', toggleTheme);
+  document.body.appendChild(btn);
+}
+
+// ---------- REVEAL ON SCROLL ----------
+function initReveal() {
+  if (!('IntersectionObserver' in window)) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('is-visible'));
+    return;
+  }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('is-visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal:not(.is-visible)').forEach(el => obs.observe(el));
+}
+// Allow async-injected content (blog posts, folder pages) to get the reveal animation.
+window.__reInitReveal = initReveal;
+
+// ---------- ROTATING TAG WIDGET ----------
+function initRotatingTags() {
+  const box = document.querySelector('.rotating-tag-box');
+  if (!box) return;
+  const items = Array.from(box.querySelectorAll('.rotating-tag-item'));
+  if (!items.length) return;
+  let idx = 0;
+  items[0].classList.add('is-active');
+  setInterval(() => {
+    const current = items[idx];
+    idx = (idx + 1) % items.length;
+    const next = items[idx];
+    current.classList.remove('is-active');
+    current.classList.add('is-leaving');
+    next.classList.add('is-active');
+    setTimeout(() => current.classList.remove('is-leaving'), 700);
+  }, 1800);
+}
+
+// ---------- LIGHTBOX (Recognition awards) ----------
+function initLightbox() {
+  const cards = document.querySelectorAll('.award-card[data-full]');
+  const box = document.getElementById('lightbox');
+  if (!cards.length || !box) return;
+  const img   = box.querySelector('.lightbox-img');
+  const cap   = box.querySelector('.lightbox-cap');
+  const close = box.querySelector('.lightbox-close');
+
+  function open(card) {
+    if (card.querySelector('.is-placeholder')) return;
+    const imgEl = card.querySelector('img');
+    if (!imgEl) return;
+    const src   = card.getAttribute('data-full');
+    const badge = card.querySelector('.award-badge');
+    const note  = card.querySelector('.award-note');
+    img.src = src;
+    img.alt = imgEl.alt || '';
+    cap.textContent = [badge && badge.textContent.trim(), note && note.textContent.trim()].filter(Boolean).join(' — ');
+    box.classList.add('is-open');
+    box.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBox() {
+    box.classList.remove('is-open');
+    box.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    img.src = '';
+  }
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => open(card));
+    card.setAttribute('tabindex', '0');
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card); }
+    });
+  });
+  close.addEventListener('click', closeBox);
+  box.addEventListener('click', e => { if (e.target === box) closeBox(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBox(); });
+}
+
+// ---------- INIT ----------
+document.addEventListener('DOMContentLoaded', () => {
+  injectThemeToggle();
+  initReveal();
+  initRotatingTags();
+  initLightbox();
+});
+
+</script>
+<script type="application/json" id="inline-beyond-data">{"literature": {"slug": "literature", "icon": "\ud83d\udcda", "title": "Literature & narrative theory", "subtitle": "On why we read, and why the stories we tell each other matter.", "intro": "I came to media studies through literature. My undergraduate years at the University of Dhaka were spent inside English departments and little magazines, reading postcolonial fiction and narrative theory. This folder holds the books, essays, and memories that still shape how I think about truth, narrative, and attention.", "sections": [{"kind": "reading-now", "title": "Reading now", "items": [{"text": "Rebecca Solnit \u2014 <em>A Field Guide to Getting Lost<\/em>", "meta": "Essays \u00b7 2026"}, {"text": "Italo Calvino \u2014 <em>Six Memos for the Next Millennium<\/em>", "meta": "Revisiting \u00b7 Lightness & Quickness"}, {"text": "Maria Popova \u2014 <em>Figuring<\/em>", "meta": "Slow read since February"}]}, {"kind": "memory", "title": "A memory", "body": "2022. Presiding over the English Department Art and Literary Club at Dhaka University. We organised a weekly <em>chai o kobita<\/em> reading circle \u2014 Bangla poems in one hand, tea-stained photocopies of Seamus Heaney in the other. I learned more about cadence and silence in those evenings than in any seminar."}, {"kind": "notes", "title": "Essays I keep returning to", "items": [{"text": "Zadie Smith \u2014 <em>Fail Better<\/em>", "meta": "The Guardian, 2007"}, {"text": "Amitav Ghosh \u2014 <em>The Great Derangement<\/em>", "meta": "On climate and the failure of literary imagination"}, {"text": "John Berger \u2014 <em>Ways of Seeing<\/em>, Ch. 1", "meta": "Still the best 15 minutes on the politics of the image"}]}]}, "spanish": {"slug": "spanish", "icon": "\ud83c\udf0d", "title": "Spanish & language learning", "subtitle": "Currently A2, aiming for B1 by end of 2026.", "intro": "I fell in love with Spanish late \u2014 through Bola\u00f1o, through Almod\u00f3var, through a trip I haven't taken yet. Tracking my progress honestly, including the plateaus.", "sections": [{"kind": "reading-now", "title": "Current practice", "items": [{"text": "News in Slow Spanish \u2014 Intermediate", "meta": "3 episodes a week"}, {"text": "Anki \u2014 1,200-card personal deck", "meta": "~20 min/day"}, {"text": "Language exchange on Tandem \u2014 Buenos Aires", "meta": "Weekly 30 min"}]}, {"kind": "memory", "title": "Why Spanish", "body": "The short answer: I want to read <em>2666<\/em> in the original Spanish before I turn 30. The longer answer involves a Colombian journalist I interviewed in 2024 whose phrasing in English was exquisite but whose Spanish \u2014 I could tell from a single voice note \u2014 was a whole other octave. I wanted to hear her properly."}, {"kind": "notes", "title": "Things I've written about language", "items": [{"text": "Fossilized errors and fluency illusions", "meta": "Teaching notes \u00b7 Quickblog"}, {"text": "Bangla \u2192 English \u2192 Spanish: what transfers", "meta": "Draft \u00b7 coming soon"}]}]}, "film": {"slug": "film", "icon": "\ud83c\udfac", "title": "Film aesthetics", "subtitle": "On cinema as a way of looking, not just watching.", "intro": "Film has been my second education. I keep a running log of what I watch and what it taught me about framing, pacing, and truth.", "sections": [{"kind": "reading-now", "title": "Recent watches", "items": [{"text": "<em>Perfect Days<\/em> \u2014 Wim Wenders (2023)", "meta": "Tokyo \u00b7 on noticing"}, {"text": "<em>Aftersun<\/em> \u2014 Charlotte Wells (2022)", "meta": "Memory, grain, video"}, {"text": "<em>Matir Moina<\/em> \u2014 Tareque Masud (2002)", "meta": "Re-watch \u00b7 always"}]}, {"kind": "memory", "title": "The frame that changed me", "body": "Satyajit Ray's <em>Pather Panchali<\/em> \u2014 the scene where Apu and Durga see the train cut across the kaash flowers. I was fourteen, watching on a borrowed DVD with a scratched surface. The screen would stutter every few frames. Somehow that made it more real. It was the first time I understood that cinema could be a way of remembering things that had not yet happened."}, {"kind": "notes", "title": "Writing about film", "items": [{"text": "TBS feature \u2014 On Ruben \u00d6stlund and the comedy of inequality", "meta": "2024"}, {"text": "Notebook \u2014 staircase shots in Bangla cinema", "meta": "Unpublished, ongoing"}]}]}, "photography": {"slug": "photography", "icon": "\ud83d\udcf7", "title": "Photography & travel", "subtitle": "Quiet frames from the places I get to stand still in.", "intro": "I carry a Fujifilm X100V everywhere. Most of what I shoot I never publish. This folder is for the few I come back to \u2014 and for the trips behind them.", "sections": [{"kind": "reading-now", "title": "Recent trips", "items": [{"text": "Oxford, UK \u2014 Nov 2025", "meta": "Sa\u00efd Business School \u00b7 UNESCO programme"}, {"text": "Sylhet, Bangladesh \u2014 Feb 2026", "meta": "Tea estate fieldwork, 3 days"}, {"text": "Kathmandu, Nepal \u2014 Dec 2024", "meta": "SANJ conference"}]}, {"kind": "memory", "title": "A photograph I haven't shared", "body": "A boy sleeping on a stack of newspapers outside the Paltan press market, 4:30 AM, November 2023. I was on an assignment about night-shift printers. I took one frame and put the camera down. It felt rude to take a second. Sometimes the ethics of the picture you don't take is more interesting than the one you do."}, {"kind": "notes", "title": "Kit & approach", "items": [{"text": "Fujifilm X100V \u00b7 35mm equivalent \u00b7 always", "meta": "One camera, one focal length"}, {"text": "Classic Chrome profile, no edits", "meta": "Discipline > flexibility"}, {"text": "Print contact sheets every quarter", "meta": "A4, matte, binder"}]}]}, "community": {"slug": "community", "icon": "\ud83c\udfeb", "title": "Community education", "subtitle": "Teaching, translating, and passing things along.", "intro": "Some of the most meaningful work I've done happens outside the newsroom \u2014 counselling students, editing SOPs for free, running OSINT workshops for fact-checkers. This folder gathers those threads.", "sections": [{"kind": "reading-now", "title": "Ongoing", "items": [{"text": "<em>Tools for Journalists<\/em> \u2014 open OSINT resource hub", "meta": "Founded May 2025"}, {"text": "Academic English \u2014 ULAB CLS", "meta": "Two undergraduate cohorts"}, {"text": "Free SOP editing \u2014 UK applicants", "meta": "~50 students/year"}]}, {"kind": "memory", "title": "Why I do this", "body": "In 2019, a junior from my village in Kishoreganj showed me his IELTS speaking practice recording. He had memorised every answer word-for-word. His accent was perfect. His confidence was a performance. I realised most of our education system rewards that performance. So I started spending evenings helping students actually think in English rather than recite in it. That habit has never really stopped."}, {"kind": "notes", "title": "Workshops & talks", "items": [{"text": "OSINT for newsrooms \u2014 300+ journalists trained", "meta": "2023\u20132026 \u00b7 Dhaka, Khulna, Chattogram"}, {"text": "Verification basics \u2014 BBC Media Action alumni", "meta": "Guest session \u00b7 2025"}]}]}, "philosophy": {"slug": "philosophy", "icon": "\ud83e\udde9", "title": "Philosophy & ethics", "subtitle": "The slow questions behind the fast news cycle.", "intro": "Journalism throws up ethical puzzles every week. This folder is where I try to sit with them properly \u2014 in conversation with epistemology, ethics of AI, and the Bengali humanist tradition.", "sections": [{"kind": "reading-now", "title": "Thinking about", "items": [{"text": "Miranda Fricker \u2014 <em>Epistemic Injustice<\/em>", "meta": "Re-reading \u00b7 testimonial injustice"}, {"text": "Shannon Vallor \u2014 <em>Technology and the Virtues<\/em>", "meta": "For the algorithm paper"}, {"text": "Rabindranath Tagore \u2014 <em>The Religion of Man<\/em>", "meta": "Because I always come back"}]}, {"kind": "memory", "title": "The question I keep failing to answer", "body": "Is it ethical to publish a verified story if you know the algorithm will only amplify the first, most inflammatory paragraph? I've sat with this since 2023. It shapes how I now structure leads. It has not made me a faster writer. It has, I hope, made me a more honest one."}, {"kind": "notes", "title": "Writing in progress", "items": [{"text": "Algorithmic epistemic injustice in South Asian feeds", "meta": "Working paper \u00b7 Fricker + Bhaskar"}, {"text": "On the virtue of slowness in investigative work", "meta": "Essay draft"}]}]}}</script>
+<script>
+/* ==========================================================
+   Beyond-the-work folder renderer
+   Prefers inline data (<script id="inline-beyond-data">),
+   falls back to fetch() for development workflows.
+   ========================================================== */
+
+(function () {
+  const slug = document.body.getAttribute('data-slug');
+  if (!slug) return;
+
+  function render(data) {
+    const entry = data[slug];
+    if (!entry) {
+      const t = document.getElementById('b-title');
+      if (t) t.textContent = 'Folder not found';
+      return;
+    }
+
+    const bc = document.getElementById('bc-slug');
+    if (bc) bc.textContent = entry.title;
+
+    const icon = document.getElementById('b-icon');
+    if (icon) icon.textContent = entry.icon || '•';
+    const title = document.getElementById('b-title');
+    if (title) title.innerHTML = entry.title;
+    const sub = document.getElementById('b-subtitle');
+    if (sub) sub.textContent = entry.subtitle || '';
+    const intro = document.getElementById('b-intro');
+    if (intro) intro.innerHTML = entry.intro || '';
+
+    const host = document.getElementById('b-sections');
+    if (!host) return;
+    host.innerHTML = (entry.sections || []).map(function (s) {
+      if (s.kind === 'memory') {
+        return '<section class="beyond-memory reveal">' +
+          '<p class="beyond-memory-label">' + (s.title || 'A memory') + '<\/p>' +
+          '<blockquote class="beyond-memory-body">' + (s.body || '') + '<\/blockquote>' +
+          '<\/section>';
+      }
+      var items = (s.items || []).map(function (it) {
+        return '<li class="folder-entry">' +
+          '<span class="folder-entry-text">' + (it.text || '') + '<\/span>' +
+          (it.meta ? '<span class="folder-entry-meta">' + it.meta + '<\/span>' : '') +
+          '<\/li>';
+      }).join('');
+      return '<section class="beyond-list reveal">' +
+        '<h2 class="section-subtitle">' + (s.title || '') + '<\/h2>' +
+        '<ul class="folder-list">' + items + '<\/ul>' +
+        '<\/section>';
+    }).join('');
+
+    if (window.__reInitReveal) window.__reInitReveal();
+  }
+
+  // 1) Prefer inline data — works on any host, no fetch, no CORS, no MIME pain
+  var inline = document.getElementById('inline-beyond-data');
+  if (inline && inline.textContent) {
+    try { render(JSON.parse(inline.textContent)); return; }
+    catch (e) { /* fall through to fetch */ }
+  }
+
+  // 2) Fallback: fetch (useful during local development)
+  fetch('../content/beyond.json')
+    .then(function (r) { return r.json(); })
+    .then(render)
+    .catch(function () {
+      var t = document.getElementById('b-title');
+      if (t) t.textContent = 'Could not load folder';
+      var i = document.getElementById('b-intro');
+      if (i) i.innerHTML = '<span style="color:var(--text3);font-family:DM Mono,monospace;font-size:12px;">Folder data unavailable. Check the browser console for details.<\/span>';
+    });
+})();
+
+</script>
+</body>
+</html>

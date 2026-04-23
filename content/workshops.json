@@ -1,0 +1,62 @@
+[
+  {
+    "date": "Ongoing · 2024–present",
+    "sortKey": "2026-04",
+    "format": "Open series",
+    "title": "OSINT fundamentals for newsrooms",
+    "audience": "Working journalists & fact-checkers",
+    "location": "Dhaka · Khulna · Chattogram",
+    "note": "Six-part modular workshop covering reverse image search, geolocation, whois/DNS reconnaissance, social-media provenance, archive.today workflows, and source-chain documentation. 300+ participants trained to date.",
+    "topics": ["OSINT", "verification", "geolocation", "provenance"]
+  },
+  {
+    "date": "Mar 2026",
+    "sortKey": "2026-03",
+    "format": "Half-day",
+    "title": "Verification for broadcast producers",
+    "audience": "ATN News producers' desk",
+    "location": "ATN Bangla · Dhaka",
+    "note": "Hands-on session on verifying viral video, identifying synthetic media, and writing corrections without losing the audience.",
+    "topics": ["broadcast", "synthetic media", "corrections"]
+  },
+  {
+    "date": "Every semester",
+    "sortKey": "2026-02",
+    "format": "Course module",
+    "title": "Data journalism & public-data investigations",
+    "audience": "ULAB MSJ undergraduates",
+    "location": "University of Liberal Arts Bangladesh",
+    "note": "Module taught within the BSS Media Studies programme — covers scraping, spreadsheet investigations, and ethical data visualisation.",
+    "topics": ["data journalism", "spreadsheets", "visualisation"]
+  },
+  {
+    "date": "Nov 2025",
+    "sortKey": "2025-11",
+    "format": "Invited session",
+    "title": "Algorithmic accountability for public-sector communicators",
+    "audience": "Oxford Saïd / UNESCO cohort — alumni meetup",
+    "location": "Online",
+    "note": "Post-programme peer session on translating the Oxford Saïd executive curriculum into South Asian governance contexts.",
+    "topics": ["algorithms", "policy", "public sector"]
+  },
+  {
+    "date": "2025",
+    "sortKey": "2025-06",
+    "format": "Guest lecture",
+    "title": "Rumour cascades during political transitions",
+    "audience": "BBC Media Action alumni network",
+    "location": "Dhaka",
+    "note": "Case study on the July 2024 protests, using open-source tools to trace rumour spread across Telegram and Facebook.",
+    "topics": ["rumour", "misinformation", "case study"]
+  },
+  {
+    "date": "2024–present",
+    "sortKey": "2024-09",
+    "format": "Monthly",
+    "title": "Academic English for journalism students",
+    "audience": "ULAB Centre for Language Studies",
+    "location": "ULAB · Dhaka",
+    "note": "Ongoing teaching module on academic writing, fossilized-error correction, and argumentative structure for undergraduates in journalism tracks.",
+    "topics": ["academic writing", "teaching", "rhetoric"]
+  }
+]
