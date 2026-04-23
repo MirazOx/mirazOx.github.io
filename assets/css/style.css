@@ -1,24 +1,44 @@
-/* ===============================
-   ROOT + BASE
-================================ */
+/* =========================================
+   BASE RESET
+========================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Instrument Sans", system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* =========================================
+   COLOR SYSTEM
+========================================= */
 :root {
   --accent-teal: #2dd4bf;
   --accent-teal-dark: #14b8a6;
 
   --bg: #f5f7f6;
   --bg-card: #ffffff;
+  --bg-soft: #eef2f1;
+
   --text: #1b2430;
   --text-muted: #6b7280;
 
   --border-subtle: rgba(14, 35, 29, 0.14);
 
-  --nav-bg: rgba(255, 255, 255, 0.75);
+  --nav-bg: rgba(255, 255, 255, 0.78);
   --nav-blur: blur(18px);
 }
 
 html[data-theme="dark"] {
   --bg: #0b1117;
   --bg-card: #121a21;
+  --bg-soft: #16212b;
+
   --text: #eef4f8;
   --text-muted: #9fb0c0;
 
@@ -27,19 +47,26 @@ html[data-theme="dark"] {
   --nav-bg: rgba(24, 30, 38, 0.94);
 }
 
-/* ===============================
+/* =========================================
    BODY
-================================ */
+========================================= */
 body {
-  margin: 0;
-  font-family: "Instrument Sans", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
 
-/* ===============================
-   NAV BAR
-================================ */
+/* =========================================
+   LAYOUT
+========================================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
 .nav-modern {
   position: fixed;
   top: 16px;
@@ -60,7 +87,6 @@ body {
   box-shadow: 0 14px 30px rgba(0,0,0,0.08);
 }
 
-/* container */
 .nav-inner {
   position: relative;
   display: flex;
@@ -69,17 +95,11 @@ body {
   padding: 10px 14px;
 }
 
-/* left side */
-.nav-left {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+/* LEFT */
 .nav-home {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-weight: 600;
 }
 
@@ -93,19 +113,18 @@ body {
   justify-content: center;
 }
 
-/* center links */
+/* CENTER LINKS */
 .nav-main {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
 
 .nav-main a {
-  position: relative;
   text-decoration: none;
   color: var(--text-muted);
   font-size: 14px;
-  transition: all 0.2s ease;
+  position: relative;
 }
 
 .nav-main a:hover,
@@ -116,8 +135,8 @@ body {
 .nav-main a::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -6px;
+  left: 0;
   width: 0%;
   height: 2px;
   background: linear-gradient(90deg, var(--accent-teal), var(--accent-teal-dark));
@@ -129,14 +148,18 @@ body {
   width: 100%;
 }
 
-/* right side */
+/* RIGHT */
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* MORE BUTTON */
+/* MORE */
+.nav-more {
+  position: relative;
+}
+
 .nav-more-btn {
   height: 40px;
   border-radius: 999px;
@@ -153,11 +176,11 @@ body {
   border-color: var(--accent-teal);
 }
 
-/* dropdown */
+/* DROPDOWN */
 .nav-dropdown {
   position: absolute;
   right: 0;
-  top: 56px;
+  top: 54px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-radius: 14px;
@@ -165,6 +188,10 @@ body {
   display: none;
   flex-direction: column;
   min-width: 180px;
+}
+
+.nav-more:hover .nav-dropdown {
+  display: flex;
 }
 
 .nav-dropdown a {
@@ -185,24 +212,19 @@ body {
   color: var(--accent-teal);
 }
 
-/* ===============================
-   THEME TOGGLE SWITCH
-================================ */
-.theme-toggle {
-  border: none;
-  background: none;
-}
-
+/* =========================================
+   THEME SWITCH
+========================================= */
 .nav-theme-toggle {
   width: 54px;
   height: 30px;
   border-radius: 999px;
   border: 1px solid var(--border-subtle);
   background: var(--bg-card);
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .toggle-track {
@@ -237,7 +259,7 @@ body {
   display: none;
 }
 
-/* DARK MODE SWITCH STATE */
+/* DARK SWITCH */
 html[data-theme="dark"] .toggle-thumb {
   transform: translateX(22px);
   background: #182026;
@@ -252,21 +274,12 @@ html[data-theme="dark"] .toggle-thumb .icon-sun {
   stroke: var(--accent-teal);
 }
 
-/* ===============================
-   DARK MODE NAV STYLE
-================================ */
+/* =========================================
+   DARK NAV PANEL
+========================================= */
 html[data-theme="dark"] .nav-modern::before {
   border: 1px solid rgba(45, 212, 191, 0.24);
   background: rgba(24, 30, 38, 0.94);
-}
-
-html[data-theme="dark"] .nav-main a,
-html[data-theme="dark"] .nav-dropdown a {
-  color: #eef4f8;
-}
-
-html[data-theme="dark"] .nav-main a:hover {
-  background: rgba(45,212,191,0.1);
 }
 
 html[data-theme="dark"] .nav-dropdown {
@@ -274,10 +287,51 @@ html[data-theme="dark"] .nav-dropdown {
   border-color: rgba(45,212,191,0.24);
 }
 
-/* ===============================
+/* =========================================
+   HERO (basic restored)
+========================================= */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+section {
+  padding: 60px 0;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+
+/* =========================================
    RESPONSIVE
-================================ */
-@media (max-width: 720px) {
+========================================= */
+@media (max-width: 768px) {
   .nav-main {
     display: none;
   }
