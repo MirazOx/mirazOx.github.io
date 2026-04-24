@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attention Ledger — Md. Miraz Hossain</title>
+<meta name="description" content="Interactive newsroom-analysis project concept by Md. Miraz Hossain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="nav-modern" id="siteNav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-home"><span class="nav-home-icon">M</span></a>
+    </div>
+    <div class="nav-main">
+      <a href="research.html">Research</a>
+      <a href="academic.html">Academic</a>
+      <a href="writing.html">Writing</a>
+      <a href="quickblog.html">#QuickBlog</a>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-more">
+        <button class="nav-more-btn" id="navMoreBtn" aria-expanded="false">⋯ More</button>
+        <div class="nav-dropdown">
+          <a href="projects.html"><span class="nav-dd-icon">📁</span>Projects</a>
+          <a href="credentials.html"><span class="nav-dd-icon">🏅</span>Credentials</a>
+          <a href="services.html"><span class="nav-dd-icon">🛠</span>Services</a>
+          <a href="about.html"><span class="nav-dd-icon">👤</span>About</a>
+        </div>
+      </div>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
+        <span class="toggle-track"><span class="toggle-thumb"><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></svg></span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container-wide">
+    <section class="project-hero">
+      <a class="project-backlink" href="projects.html">← Back to projects</a>
+      <div class="project-hero-card reveal">
+        <img class="project-hero-image" src="assets/images/projects/newsroom-attention-cover.svg" alt="Cover artwork for Attention Ledger">
+        <div class="project-hero-copy">
+          <div>
+            <p class="project-hero-kicker">Concept project · editorial analytics · accountability storytelling</p>
+            <h1 class="project-hero-title">Attention Ledger</h1>
+            <p class="project-hero-desc">A prototype for showing how editorial attention accumulates, concentrates, and excludes. This is the kind of project that could sit between journalism, platform studies, and newsroom self-audit, and it gives your project page a second distinct mode beyond maps or economic stories.</p>
+          </div>
+          <div class="project-meta-list">
+            <div class="project-meta-item">
+              <span>Question</span>
+              <strong>Who gets covered repeatedly, and who disappears from the frame?</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Interface</span>
+              <strong>Beat filters, source-balance snapshots, and narrative annotations</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Status</span>
+              <strong>Showcase concept for future newsroom or research collaboration</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-grid">
+      <article class="story-card reveal">
+        <h2>Why this belongs in the portfolio</h2>
+        <p>It shows a different side of your project identity. The Bachelor Economy presents reporting and social analysis. Floodlines suggests spatial and climate storytelling. Attention Ledger rounds out the set with an editorial systems project, which makes the portfolio feel broader without breaking its overall tone.</p>
+      </article>
+
+      <section class="interactive-panel reveal">
+        <div class="interactive-head">
+          <div>
+            <p class="interactive-label">Interactive module</p>
+            <h3>Filter the beat, inspect the imbalance</h3>
+          </div>
+        </div>
+        <div class="interactive-grid">
+          <div class="interactive-stage">
+            <div class="toggle-row" id="ledger-toggle">
+              <button class="toggle-chip is-active" data-beat="politics">Politics</button>
+              <button class="toggle-chip" data-beat="climate">Climate</button>
+              <button class="toggle-chip" data-beat="labour">Labour</button>
+            </div>
+            <div class="story-kpis" style="margin-top:1rem;">
+              <div class="story-kpi">
+                <strong id="ledger-repeat">48%</strong>
+                <span>Repeat elite sources</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="ledger-community">14%</strong>
+                <span>Community voices</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="ledger-followup">22%</strong>
+                <span>Follow-up rate</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="ledger-gap">4.1x</strong>
+                <span>Attention gap</span>
+              </div>
+            </div>
+          </div>
+          <div class="interactive-controls">
+            <div class="interactive-copy">
+              <strong id="ledger-headline">Politics coverage narrows around familiar institutions</strong>
+              <p id="ledger-copy">The point is not to reduce journalism to a dashboard. It is to give reporters and readers a quick way to see concentration patterns, then move into examples, story notes, and possible editorial responses.</p>
+            </div>
+            <p class="mini-note" id="ledger-note">Prototype indicators demonstrate the experience rather than a live audit.</p>
+          </div>
+        </div>
+      </section>
+
+      <article class="story-card reveal">
+        <h2>Possible reading path</h2>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <strong>Ledger</strong>
+            <p>Start with a simple imbalance snapshot: recurring institutions, missing grassroots voices, and follow-up blind spots.</p>
+          </div>
+          <div class="prompt-card">
+            <strong>Examples</strong>
+            <p>Move into a few concrete stories showing where coverage stayed shallow, repeated the same sources, or stopped too early.</p>
+          </div>
+          <div class="prompt-card">
+            <strong>Response</strong>
+            <p>End with editorial questions and transparent next steps rather than a blame-heavy conclusion.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <p class="footer-text">© 2026 Md. Miraz Hossain · Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="projects.html">projects</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const ledgerData = {
+    politics: { repeat: '48%', community: '14%', followup: '22%', gap: '4.1x', headline: 'Politics coverage narrows around familiar institutions', copy: 'The point is not to reduce journalism to a dashboard. It is to give reporters and readers a quick way to see concentration patterns, then move into examples, story notes, and possible editorial responses.', note: 'Prototype indicators demonstrate the experience rather than a live audit.' },
+    climate: { repeat: '29%', community: '31%', followup: '18%', gap: '2.2x', headline: 'Climate stories widen the source field but lose continuity', copy: 'Climate beats often include local voices at the moment of crisis, yet the longer recovery arc can vanish quickly. An interactive project can make that disappearance visible.', note: 'This concept foregrounds editorial continuity as much as source diversity.' },
+    labour: { repeat: '36%', community: '19%', followup: '11%', gap: '3.6x', headline: 'Labour gets episodic attention, not sustained scrutiny', copy: 'Workers appear when conflict spikes, then disappear once the immediate headline passes. This project would highlight how attention fades before accountability does its job.', note: 'Numbers are illustrative placeholders for a future audit framework.' }
+  };
+
+  const chips = Array.from(document.querySelectorAll('#ledger-toggle .toggle-chip'));
+  const repeat = document.getElementById('ledger-repeat');
+  const community = document.getElementById('ledger-community');
+  const followup = document.getElementById('ledger-followup');
+  const gap = document.getElementById('ledger-gap');
+  const headline = document.getElementById('ledger-headline');
+  const copy = document.getElementById('ledger-copy');
+  const note = document.getElementById('ledger-note');
+
+  function render(beat) {
+    const item = ledgerData[beat];
+    repeat.textContent = item.repeat;
+    community.textContent = item.community;
+    followup.textContent = item.followup;
+    gap.textContent = item.gap;
+    headline.textContent = item.headline;
+    copy.textContent = item.copy;
+    note.textContent = item.note;
+    chips.forEach((chip) => chip.classList.toggle('is-active', chip.dataset.beat === beat));
+  }
+
+  chips.forEach((chip) => chip.addEventListener('click', () => render(chip.dataset.beat)));
+  render('politics');
+});
+</script>
+</body>
+</html>

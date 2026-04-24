@@ -1,0 +1,27 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0E1720"/>
+  <rect width="1600" height="900" fill="url(#paint0_radial)"/>
+  <rect x="934" y="113" width="508" height="588" rx="28" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="1001" y="179" width="140" height="312" rx="16" fill="#132533"/>
+  <rect x="1163" y="236" width="205" height="255" rx="16" fill="#16394A"/>
+  <rect x="1001" y="519" width="367" height="94" rx="16" fill="#0F766E" fill-opacity="0.24" stroke="rgba(255,255,255,0.12)"/>
+  <rect x="1001" y="633" width="240" height="28" rx="14" fill="#ECF4F2" fill-opacity="0.15"/>
+  <rect x="188" y="168" width="580" height="420" rx="30" fill="rgba(7,14,20,0.42)" stroke="rgba(255,255,255,0.14)"/>
+  <rect x="258" y="238" width="134" height="246" rx="6" fill="#E7D8BF"/>
+  <rect x="408" y="238" width="304" height="246" rx="6" fill="#182A37"/>
+  <rect x="438" y="269" width="244" height="27" rx="13.5" fill="#2A4758"/>
+  <rect x="438" y="317" width="196" height="20" rx="10" fill="#233947"/>
+  <rect x="438" y="356" width="222" height="20" rx="10" fill="#233947"/>
+  <rect x="438" y="395" width="162" height="20" rx="10" fill="#233947"/>
+  <rect x="258" y="513" width="454" height="18" rx="9" fill="#D6B78E"/>
+  <path d="M83 744C382 660 659 661 915 744V900H83V744Z" fill="#101A24"/>
+  <path d="M842 758C1059 699 1291 699 1517 758V900H842V758Z" fill="#14212D"/>
+  <text x="188" y="678" fill="#F3F5F6" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-style="italic">The Bachelor Economy</text>
+  <text x="194" y="735" fill="#97AAB9" font-family="Arial, sans-serif" font-size="28" letter-spacing="4">HOUSING, MEAL-RATE INFLATION, AND THE COST OF LIVING SOLO IN DHAKA</text>
+  <defs>
+    <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1220 177) rotate(131.581) scale(1046.51 1230.51)">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#0E1720"/>
+    </radialGradient>
+  </defs>
+</svg>

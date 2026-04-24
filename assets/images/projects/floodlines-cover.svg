@@ -1,0 +1,26 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0D1B2A"/>
+  <rect width="1600" height="900" fill="url(#paint0_linear)"/>
+  <path d="M0 512C176 547 270 565 412 541C553 516 638 441 775 432C935 421 1074 512 1222 511C1362 510 1474 453 1600 430V900H0V512Z" fill="#12324A"/>
+  <path d="M0 585C162 634 304 667 471 647C643 625 708 529 880 527C1039 524 1116 611 1270 619C1403 626 1494 580 1600 545V900H0V585Z" fill="#16516C"/>
+  <path d="M0 663C173 702 302 735 477 719C646 703 748 620 906 620C1059 620 1149 683 1304 694C1417 701 1501 684 1600 653V900H0V663Z" fill="#49A5A0"/>
+  <rect x="149" y="149" width="452" height="224" rx="26" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.16)"/>
+  <rect x="201" y="201" width="125" height="118" rx="16" fill="#EAF8F6" fill-opacity="0.2"/>
+  <path d="M383 220H544" stroke="#DDF7F4" stroke-opacity="0.8" stroke-width="18" stroke-linecap="round"/>
+  <path d="M383 269H515" stroke="#DDF7F4" stroke-opacity="0.48" stroke-width="18" stroke-linecap="round"/>
+  <path d="M383 318H456" stroke="#DDF7F4" stroke-opacity="0.48" stroke-width="18" stroke-linecap="round"/>
+  <g opacity="0.9">
+    <circle cx="1200" cy="198" r="84" fill="#D8F1EC" fill-opacity="0.12"/>
+    <circle cx="1200" cy="198" r="49" fill="#D8F1EC" fill-opacity="0.18"/>
+    <circle cx="1200" cy="198" r="11" fill="#D8F1EC"/>
+  </g>
+  <text x="148" y="736" fill="#F5FBFC" font-family="Georgia, 'Times New Roman', serif" font-size="90" font-style="italic">Floodlines</text>
+  <text x="149" y="792" fill="#C2E8E3" font-family="Arial, sans-serif" font-size="29" letter-spacing="4">TRACKING WATER, DISPLACEMENT, AND RESPONSE ACROSS THE DHAKA EDGE</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="800" y1="0" x2="800" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1D32"/>
+      <stop offset="0.5" stop-color="#10304C"/>
+      <stop offset="1" stop-color="#0A1626"/>
+    </linearGradient>
+  </defs>
+</svg>

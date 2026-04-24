@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Floodlines — Md. Miraz Hossain</title>
+<meta name="description" content="Interactive climate-reporting project concept by Md. Miraz Hossain.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="nav-modern" id="siteNav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-home"><span class="nav-home-icon">M</span></a>
+    </div>
+    <div class="nav-main">
+      <a href="research.html">Research</a>
+      <a href="academic.html">Academic</a>
+      <a href="writing.html">Writing</a>
+      <a href="quickblog.html">#QuickBlog</a>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-more">
+        <button class="nav-more-btn" id="navMoreBtn" aria-expanded="false">⋯ More</button>
+        <div class="nav-dropdown">
+          <a href="projects.html"><span class="nav-dd-icon">📁</span>Projects</a>
+          <a href="credentials.html"><span class="nav-dd-icon">🏅</span>Credentials</a>
+          <a href="services.html"><span class="nav-dd-icon">🛠</span>Services</a>
+          <a href="about.html"><span class="nav-dd-icon">👤</span>About</a>
+        </div>
+      </div>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
+        <span class="toggle-track"><span class="toggle-thumb"><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></svg></span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container-wide">
+    <section class="project-hero">
+      <a class="project-backlink" href="projects.html">← Back to projects</a>
+      <div class="project-hero-card reveal">
+        <img class="project-hero-image" src="assets/images/projects/floodlines-cover.svg" alt="Cover artwork for Floodlines">
+        <div class="project-hero-copy">
+          <div>
+            <p class="project-hero-kicker">Concept project · climate reporting · explorable map story</p>
+            <h1 class="project-hero-title">Floodlines</h1>
+            <p class="project-hero-desc">A prototype for a future interactive project about how floodwater moves through the Dhaka edge, who gets displaced first, and how uneven the response can feel from one area to another. This page works as a design sample for the kind of interactive project your portfolio can hold.</p>
+          </div>
+          <div class="project-meta-list">
+            <div class="project-meta-item">
+              <span>Format</span>
+              <strong>Story-first map narrative with layered district snapshots</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Theme</span>
+              <strong>Climate vulnerability, mobility, and emergency response</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Status</span>
+              <strong>Concept example for project showcase design</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-grid">
+      <article class="story-card reveal">
+        <h2>How this project would work</h2>
+        <p>Rather than present flood reporting as one long article, this concept breaks the experience into location-based story states. A reader can switch between edge districts and see how rainfall, drainage, displacement, and public response shift from one area to the next. The interaction is modest, but it changes the reading rhythm in a useful way.</p>
+      </article>
+
+      <section class="interactive-panel reveal">
+        <div class="interactive-head">
+          <div>
+            <p class="interactive-label">Interactive module</p>
+            <h3>Switch districts, watch the story change</h3>
+          </div>
+        </div>
+        <div class="interactive-grid">
+          <div class="interactive-stage">
+            <div class="toggle-row" id="flood-toggle">
+              <button class="toggle-chip is-active" data-zone="demra">Demra</button>
+              <button class="toggle-chip" data-zone="uttara">Uttara</button>
+              <button class="toggle-chip" data-zone="keraniganj">Keraniganj</button>
+            </div>
+            <div class="story-kpis" style="margin-top:1rem;">
+              <div class="story-kpi">
+                <strong id="flood-hours">18h</strong>
+                <span>Standing water</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="flood-depth">1.8ft</strong>
+                <span>Peak depth</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="flood-travel">65%</strong>
+                <span>Routes disrupted</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="flood-aid">2/5</strong>
+                <span>Response access score</span>
+              </div>
+            </div>
+          </div>
+          <div class="interactive-controls">
+            <div class="interactive-copy">
+              <strong id="flood-headline">Demra absorbs overflow without much visibility</strong>
+              <p id="flood-copy">The strongest version of this project would pair rainfall data with on-the-ground diaries, commuter routes, school closure notes, and interview clips from families whose flooding is treated as routine rather than exceptional.</p>
+            </div>
+            <p class="mini-note" id="flood-note">Prototype metrics are illustrative and here to demonstrate the project format.</p>
+          </div>
+        </div>
+      </section>
+
+      <article class="story-card reveal">
+        <h2>Reporting prompts built into the design</h2>
+        <div class="prompt-grid">
+          <div class="prompt-card">
+            <strong>Before water</strong>
+            <p>What decisions made these places vulnerable before the rainfall event even happened?</p>
+          </div>
+          <div class="prompt-card">
+            <strong>During water</strong>
+            <p>Who loses mobility first: schoolchildren, workers, patients, or informal vendors?</p>
+          </div>
+          <div class="prompt-card">
+            <strong>After water</strong>
+            <p>Which forms of recovery get documented, and which ones stay invisible inside households?</p>
+          </div>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <p class="footer-text">© 2026 Md. Miraz Hossain · Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="projects.html">projects</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const floodData = {
+    demra: { hours: '18h', depth: '1.8ft', travel: '65%', aid: '2/5', headline: 'Demra absorbs overflow without much visibility', copy: 'The strongest version of this project would pair rainfall data with on-the-ground diaries, commuter routes, school closure notes, and interview clips from families whose flooding is treated as routine rather than exceptional.', note: 'Prototype metrics are illustrative and here to demonstrate the project format.' },
+    uttara: { hours: '9h', depth: '1.1ft', travel: '38%', aid: '4/5', headline: 'Uttara recovers faster because response is legible', copy: 'The contrast in this state is not just hydrological. It is infrastructural and political: drainage quality, road hierarchy, and visibility all shape how quickly recovery happens.', note: 'This concept is designed to show comparative storytelling rather than a finished dataset.' },
+    keraniganj: { hours: '26h', depth: '2.4ft', travel: '72%', aid: '1/5', headline: 'Keraniganj shows what happens at the margins', copy: 'A completed version would make river-edge life visible through route loss, temporary migration, labour interruption, and the mismatch between need and formal support.', note: 'Numbers are placeholders for a future reported-and-mapped version.' }
+  };
+
+  const chips = Array.from(document.querySelectorAll('#flood-toggle .toggle-chip'));
+  const hours = document.getElementById('flood-hours');
+  const depth = document.getElementById('flood-depth');
+  const travel = document.getElementById('flood-travel');
+  const aid = document.getElementById('flood-aid');
+  const headline = document.getElementById('flood-headline');
+  const copy = document.getElementById('flood-copy');
+  const note = document.getElementById('flood-note');
+
+  function render(zone) {
+    const item = floodData[zone];
+    hours.textContent = item.hours;
+    depth.textContent = item.depth;
+    travel.textContent = item.travel;
+    aid.textContent = item.aid;
+    headline.textContent = item.headline;
+    copy.textContent = item.copy;
+    note.textContent = item.note;
+    chips.forEach((chip) => chip.classList.toggle('is-active', chip.dataset.zone === zone));
+  }
+
+  chips.forEach((chip) => chip.addEventListener('click', () => render(chip.dataset.zone)));
+  render('demra');
+});
+</script>
+</body>
+</html>

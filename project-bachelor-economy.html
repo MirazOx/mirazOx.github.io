@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Bachelor Economy — Md. Miraz Hossain</title>
+<meta name="description" content="Interactive adaptation of The Bachelor Economy data journalism project.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<nav class="nav-modern" id="siteNav">
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a href="index.html" class="nav-home">
+        <span class="nav-home-icon">M</span>
+      </a>
+    </div>
+    <div class="nav-main">
+      <a href="research.html">Research</a>
+      <a href="academic.html">Academic</a>
+      <a href="writing.html">Writing</a>
+      <a href="quickblog.html">#QuickBlog</a>
+    </div>
+    <div class="nav-actions">
+      <div class="nav-more">
+        <button class="nav-more-btn" id="navMoreBtn" aria-expanded="false">⋯ More</button>
+        <div class="nav-dropdown">
+          <a href="projects.html"><span class="nav-dd-icon">📁</span>Projects</a>
+          <a href="credentials.html"><span class="nav-dd-icon">🏅</span>Credentials</a>
+          <a href="services.html"><span class="nav-dd-icon">🛠</span>Services</a>
+          <a href="about.html"><span class="nav-dd-icon">👤</span>About</a>
+        </div>
+      </div>
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
+        <span class="toggle-track">
+          <span class="toggle-thumb">
+            <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/></svg>
+          </span>
+        </span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container-wide">
+    <section class="project-hero">
+      <a class="project-backlink" href="projects.html">← Back to projects</a>
+      <div class="project-hero-card reveal">
+        <img class="project-hero-image" src="assets/images/projects/bachelor-economy-cover.svg" alt="Cover artwork for The Bachelor Economy">
+        <div class="project-hero-copy">
+          <div>
+            <p class="project-hero-kicker">Data journalism final project · MSJ 3253 · December 22, 2025</p>
+            <h1 class="project-hero-title">The <em>Bachelor Economy</em></h1>
+            <p class="project-hero-desc">A web-first retelling of your reported piece on the cost of living solo in Dhaka. This version translates the original report into a more readable digital feature with quick stats, a year slider, and a neighbourhood comparison that makes the bachelor penalty easier to grasp at a glance.</p>
+          </div>
+          <div class="project-meta-list">
+            <div class="project-meta-item">
+              <span>Focus</span>
+              <strong>Housing discrimination, food inflation, and graduate precarity in Dhaka</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Built from</span>
+              <strong>Course report, interview material, scraped rental trends, and supporting economic context</strong>
+            </div>
+            <div class="project-meta-item">
+              <span>Source file</span>
+              <strong><a href="pdfs/team-data-decoder.pdf">Read the PDF version</a></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-content-grid">
+      <article class="story-card reveal">
+        <h2>What the story argues</h2>
+        <p>The core argument is simple: young unmarried professionals in Dhaka are often pushed into a shadow housing market where they pay more, get less, and absorb a stack of hidden costs that families do not face in the same way. The project combines lived experience with rental data, interview reporting, and broader labour-market context.</p>
+        <div class="story-pullquote">Housing becomes a penalty when marital status determines whether you can enter the formal market at all.</div>
+        <div class="story-kpis">
+          <div class="story-kpi">
+            <strong>up to 90</strong>
+            <span>Tk per sq. ft. for bachelor mess living</span>
+          </div>
+          <div class="story-kpi">
+            <strong>21.6</strong>
+            <span>Average Tk per sq. ft. for families</span>
+          </div>
+          <div class="story-kpi">
+            <strong>65-70</strong>
+            <span>Typical 2025 meal rate in Tk</span>
+          </div>
+          <div class="story-kpi">
+            <strong>20k-25k</strong>
+            <span>Sticky entry salary range</span>
+          </div>
+        </div>
+      </article>
+
+      <section class="interactive-panel reveal" aria-labelledby="solo-cost-title">
+        <div class="interactive-head">
+          <div>
+            <p class="interactive-label">Interactive module</p>
+            <h3 id="solo-cost-title">Track the squeeze over time</h3>
+          </div>
+          <p class="mini-note">Illustrative figures distilled from the project narrative for web presentation.</p>
+        </div>
+
+        <div class="interactive-grid">
+          <div class="interactive-stage">
+            <div class="story-kpis">
+              <div class="story-kpi">
+                <strong id="be-year">2020</strong>
+                <span>Selected year</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="be-meal">Tk 38</strong>
+                <span>Meal rate</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="be-seat">Tk 4,200</strong>
+                <span>Mess seat rent</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="be-left">Tk 6,300</strong>
+                <span>Monthly remainder</span>
+              </div>
+            </div>
+
+            <div class="comparison-bars">
+              <div class="comparison-row">
+                <div class="comparison-meta">
+                  <span>Family rent per sq. ft.</span>
+                  <span id="be-family">Tk 18</span>
+                </div>
+                <div class="comparison-track">
+                  <div class="comparison-fill family" id="be-family-bar" style="width:20%;"></div>
+                </div>
+              </div>
+
+              <div class="comparison-row">
+                <div class="comparison-meta">
+                  <span>Bachelor effective rate per sq. ft.</span>
+                  <span id="be-bachelor">Tk 58</span>
+                </div>
+                <div class="comparison-track">
+                  <div class="comparison-fill bachelor" id="be-bachelor-bar" style="width:64%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="interactive-controls">
+            <div class="interactive-slider">
+              <label for="be-slider">Move from 2020 to 2025</label>
+              <input id="be-slider" type="range" min="0" max="5" step="1" value="0">
+            </div>
+            <div class="interactive-copy">
+              <strong id="be-headline">Early warning signs</strong>
+              <p id="be-copy">Meal rates are still comparatively lower, but shared living is already functioning as a workaround for exclusion from standard family-oriented rentals.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="interactive-panel reveal" aria-labelledby="neighbourhood-title">
+        <div class="interactive-head">
+          <div>
+            <p class="interactive-label">Interactive module</p>
+            <h3 id="neighbourhood-title">Compare the bachelor penalty by neighbourhood</h3>
+          </div>
+        </div>
+
+        <div class="interactive-grid">
+          <div class="interactive-stage">
+            <div class="toggle-row" id="area-toggle">
+              <button class="toggle-chip is-active" data-area="mirpur">Mirpur</button>
+              <button class="toggle-chip" data-area="farmgate">Farmgate</button>
+              <button class="toggle-chip" data-area="gulshan">Gulshan</button>
+            </div>
+
+            <div class="comparison-bars">
+              <div class="comparison-row">
+                <div class="comparison-meta">
+                  <span>Family monthly flat</span>
+                  <span id="area-family-total">Tk 22,000</span>
+                </div>
+                <div class="comparison-track">
+                  <div class="comparison-fill family" id="area-family-total-bar" style="width:37%;"></div>
+                </div>
+              </div>
+              <div class="comparison-row">
+                <div class="comparison-meta">
+                  <span>Bachelor collective take from same space</span>
+                  <span id="area-bachelor-total">Tk 60,000</span>
+                </div>
+                <div class="comparison-track">
+                  <div class="comparison-fill bachelor" id="area-bachelor-total-bar" style="width:100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="interactive-controls">
+            <div class="interactive-copy">
+              <strong id="area-headline">Density keeps Mirpur relatively reachable</strong>
+              <p id="area-copy">Mirpur remains the pressure valve for young renters, but affordability comes from crowding. The landlord earns far more by selling seats than by renting the flat to one family.</p>
+            </div>
+            <p class="mini-note" id="area-note">Illustrative view: 1,000 sq. ft. family rent versus high-density bachelor occupancy.</p>
+          </div>
+        </div>
+      </section>
+
+      <article class="story-card reveal">
+        <h2>Story architecture</h2>
+        <p>The original report moves from lived experience to structure: Tanvir's room, Raihan's crowding, meal-rate inflation, graduate stagnation, the hidden service economy, and finally the policy question. That sequence works well for the web too, so this portfolio version keeps the same reporting spine while reducing the amount of uninterrupted text.</p>
+        <p>On a dedicated project page like this, people can scan the argument quickly, then slow down where they want. It reads less like a document upload and more like a designed journalistic product.</p>
+      </article>
+
+      <article class="story-card reveal">
+        <h2>Methods and reporting notes</h2>
+        <ul class="method-list">
+          <li>Rental trends were compared across public Facebook rental groups between December 2020 and December 2025.</li>
+          <li>Meal-rate information was crowdsourced through student and peer networks to ground inflation in everyday experience.</li>
+          <li>Interviews included Tanvir Ahmed, Rafsan Mahmud Hoque, Raihan, and expert voices from BIP, CPD, and REHAB.</li>
+          <li>This web version uses a simplified interactive layer to communicate patterns from the project without replacing the full report.</li>
+        </ul>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="container-wide">
+    <p class="footer-text">© 2026 Md. Miraz Hossain · Dhaka, Bangladesh</p>
+    <div class="footer-links">
+      <a href="mailto:miraz8395@gmail.com">email</a>
+      <a href="https://linkedin.com/in/miraz-hossain" target="_blank">linkedin</a>
+      <a href="projects.html">projects</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const yearlyData = [
+    { year: 2020, meal: 38, seat: 4200, left: 6300, family: 18, bachelor: 58, headline: 'Early warning signs', copy: 'Meal rates are still comparatively lower, but shared living is already functioning as a workaround for exclusion from standard family-oriented rentals.' },
+    { year: 2021, meal: 41, seat: 4500, left: 5700, family: 18.5, bachelor: 61, headline: 'Rent starts climbing faster than pay', copy: 'Mess rents move upward while entry salaries barely shift, tightening the margin young workers have after commuting and food.' },
+    { year: 2022, meal: 48, seat: 5000, left: 4700, family: 19.4, bachelor: 68, headline: 'Inflation becomes felt, not abstract', copy: 'The monthly surplus shrinks sharply once food and transport costs accelerate. Shared housing becomes less a preference and more a necessity.' },
+    { year: 2023, meal: 56, seat: 5400, left: 3900, family: 20.1, bachelor: 76, headline: 'The squeeze deepens', copy: 'Daily survival costs now eat into any chance of saving. Even a stable office job no longer guarantees a decent urban baseline.' },
+    { year: 2024, meal: 64, seat: 5800, left: 3200, family: 21, bachelor: 84, headline: 'Precarity becomes structural', copy: 'What looks like a housing issue is really a systems issue: graduate unemployment, stagnant wages, and a market that prices single people as risk.' },
+    { year: 2025, meal: 68, seat: 6100, left: 2600, family: 21.6, bachelor: 90, headline: 'The bachelor penalty is fully visible', copy: 'By 2025, meal rates have nearly doubled from the 2020 baseline while the effective square-foot price for bachelor living massively outpaces family housing.' }
+  ];
+
+  const areaData = {
+    mirpur: {
+      family: 22000,
+      bachelor: 60000,
+      headline: 'Density keeps Mirpur relatively reachable',
+      copy: 'Mirpur remains the pressure valve for young renters, but affordability comes from crowding. The landlord earns far more by selling seats than by renting the flat to one family.',
+      note: 'Illustrative view: 1,000 sq. ft. family rent versus high-density bachelor occupancy.'
+    },
+    farmgate: {
+      family: 26000,
+      bachelor: 45000,
+      headline: 'Central access carries a premium',
+      copy: 'Farmgate sits close to work and universities, so even cramped partitions become valuable. Rent pressure is mixed with commute pressure.',
+      note: 'Illustrative view based on partitioned mess living in centrally connected neighbourhoods.'
+    },
+    gulshan: {
+      family: 48000,
+      bachelor: 82000,
+      headline: 'Prestige acts like a gatekeeping tax',
+      copy: 'In Gulshan, the bachelor penalty is less about volume and more about exclusion. Solo access is rare, and subletting pushes prices into a prestige bracket.',
+      note: 'Illustrative view comparing a family lease with premium sublet extraction in an elite area.'
+    }
+  };
+
+  const slider = document.getElementById('be-slider');
+  const yearEl = document.getElementById('be-year');
+  const mealEl = document.getElementById('be-meal');
+  const seatEl = document.getElementById('be-seat');
+  const leftEl = document.getElementById('be-left');
+  const familyEl = document.getElementById('be-family');
+  const bachelorEl = document.getElementById('be-bachelor');
+  const familyBar = document.getElementById('be-family-bar');
+  const bachelorBar = document.getElementById('be-bachelor-bar');
+  const headlineEl = document.getElementById('be-headline');
+  const copyEl = document.getElementById('be-copy');
+
+  function formatTk(value) {
+    return 'Tk ' + value.toLocaleString();
+  }
+
+  function renderYear(index) {
+    const item = yearlyData[index];
+    yearEl.textContent = item.year;
+    mealEl.textContent = formatTk(item.meal);
+    seatEl.textContent = formatTk(item.seat);
+    leftEl.textContent = formatTk(item.left);
+    familyEl.textContent = formatTk(item.family);
+    bachelorEl.textContent = formatTk(item.bachelor);
+    familyBar.style.width = (item.family / 100) * 100 + '%';
+    bachelorBar.style.width = (item.bachelor / 100) * 100 + '%';
+    headlineEl.textContent = item.headline;
+    copyEl.textContent = item.copy;
+  }
+
+  slider.addEventListener('input', (event) => {
+    renderYear(Number(event.target.value));
+  });
+
+  const chips = Array.from(document.querySelectorAll('#area-toggle .toggle-chip'));
+  const areaFamilyTotal = document.getElementById('area-family-total');
+  const areaBachelorTotal = document.getElementById('area-bachelor-total');
+  const areaFamilyTotalBar = document.getElementById('area-family-total-bar');
+  const areaBachelorTotalBar = document.getElementById('area-bachelor-total-bar');
+  const areaHeadline = document.getElementById('area-headline');
+  const areaCopy = document.getElementById('area-copy');
+  const areaNote = document.getElementById('area-note');
+
+  function renderArea(areaKey) {
+    const item = areaData[areaKey];
+    const max = Math.max(item.family, item.bachelor);
+    areaFamilyTotal.textContent = formatTk(item.family);
+    areaBachelorTotal.textContent = formatTk(item.bachelor);
+    areaFamilyTotalBar.style.width = (item.family / max) * 100 + '%';
+    areaBachelorTotalBar.style.width = (item.bachelor / max) * 100 + '%';
+    areaHeadline.textContent = item.headline;
+    areaCopy.textContent = item.copy;
+    areaNote.textContent = item.note;
+    chips.forEach((chip) => chip.classList.toggle('is-active', chip.dataset.area === areaKey));
+  }
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => renderArea(chip.dataset.area));
+  });
+
+  renderYear(0);
+  renderArea('mirpur');
+});
+</script>
+</body>
+</html>
