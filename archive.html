@@ -12,19 +12,50 @@
 </head>
 <body>
 
-<nav>
-  <div class="container-wide">
-    <a class="nav-logo" href="index.html">Home</a>
-    <ul class="nav-links">
-      <li><a href="research.html">research</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="writing.html" class="active">writing</a></li>
-      <li><a href="quickblog.html">#quickblog</a></li>
-      <li><a href="academic.html">academic</a></li>
-      <li><a href="credentials.html">credentials</a></li>
-      <li><a href="services.html">services</a></li>
-      <li><a href="about.html">about</a></li>
-    </ul>
+<nav class="nav-modern" id="siteNav">
+  <div class="nav-inner">
+
+    <div class="nav-left">
+      <a href="index.html" class="nav-home">
+        <span class="nav-home-icon">M</span>
+      </a>
+    </div>
+
+    <div class="nav-main">
+      <a href="research.html">Research</a>
+      <a href="academic.html">Academic</a>
+      <a href="writing.html">Writing</a>
+      <a href="quickblog.html">#QuickBlog</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="nav-more">
+        <button class="nav-more-btn" id="navMoreBtn" aria-expanded="false">
+          ⋯ More
+        </button>
+
+        <div class="nav-dropdown">
+          <a href="projects.html"><span class="nav-dd-icon">📁</span>Projects</a>
+          <a href="credentials.html"><span class="nav-dd-icon">🏅</span>Credentials</a>
+          <a href="services.html"><span class="nav-dd-icon">🛠</span>Services</a>
+          <a href="about.html"><span class="nav-dd-icon">👤</span>About</a>
+        </div>
+      </div>
+
+      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
+        <span class="toggle-track">
+          <span class="toggle-thumb">
+            <svg class="icon-moon" viewBox="0 0 24 24">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+            <svg class="icon-sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+          </span>
+        </span>
+      </button>
+    </div>
+
   </div>
 </nav>
 
