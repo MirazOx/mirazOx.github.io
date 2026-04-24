@@ -4,14 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Projects — Md. Miraz Hossain</title>
-<meta name="description" content="Data journalism and research projects by Md. Miraz Hossain.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body data-page="projects">
 
+<!-- NAV -->
 <nav class="nav-modern" id="siteNav">
   <div class="nav-inner">
 
@@ -30,30 +33,17 @@
 
     <div class="nav-actions">
       <div class="nav-more">
-        <button class="nav-more-btn" id="navMoreBtn" aria-expanded="false">
-          ⋯ More
-        </button>
+        <button class="nav-more-btn" id="navMoreBtn">⋯ More</button>
 
         <div class="nav-dropdown">
-          <a href="projects.html"><span class="nav-dd-icon">📁</span>Projects</a>
-          <a href="credentials.html"><span class="nav-dd-icon">🏅</span>Credentials</a>
-          <a href="services.html"><span class="nav-dd-icon">🛠</span>Services</a>
-          <a href="about.html"><span class="nav-dd-icon">👤</span>About</a>
+          <a href="projects.html">📁 Projects</a>
+          <a href="credentials.html">🏅 Credentials</a>
+          <a href="services.html">🛠 Services</a>
+          <a href="about.html">👤 About</a>
         </div>
       </div>
 
-      <button id="themeToggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
-        <span class="toggle-track">
-          <span class="toggle-thumb">
-            <svg class="icon-moon" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-            <svg class="icon-sun" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="4"/>
-            </svg>
-          </span>
-        </span>
-      </button>
+      <button id="themeToggle" class="nav-theme-toggle">🌗</button>
     </div>
 
   </div>
@@ -315,113 +305,57 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
 });
 
-</script>
-<script type="application/json" id="inline-timeline-data">[{"month": "2022-02", "tbs": 2, "netra": 0}, {"month": "2022-03", "tbs": 2, "netra": 0}, {"month": "2022-07", "tbs": 3, "netra": 0}, {"month": "2022-08", "tbs": 1, "netra": 0}, {"month": "2022-09", "tbs": 4, "netra": 0}, {"month": "2022-10", "tbs": 4, "netra": 0}, {"month": "2022-11", "tbs": 4, "netra": 0}, {"month": "2022-12", "tbs": 7, "netra": 0}, {"month": "2023-01", "tbs": 7, "netra": 0}, {"month": "2023-02", "tbs": 6, "netra": 0}, {"month": "2023-03", "tbs": 4, "netra": 0}, {"month": "2023-04", "tbs": 8, "netra": 0}, {"month": "2023-05", "tbs": 4, "netra": 0}, {"month": "2023-06", "tbs": 3, "netra": 0}, {"month": "2023-07", "tbs": 9, "netra": 0}, {"month": "2023-08", "tbs": 7, "netra": 0}, {"month": "2023-09", "tbs": 7, "netra": 0}, {"month": "2023-10", "tbs": 11, "netra": 0}, {"month": "2023-11", "tbs": 9, "netra": 0}, {"month": "2023-12", "tbs": 7, "netra": 0}, {"month": "2024-01", "tbs": 5, "netra": 2}, {"month": "2024-02", "tbs": 5, "netra": 0}, {"month": "2024-03", "tbs": 3, "netra": 0}, {"month": "2024-04", "tbs": 7, "netra": 0}, {"month": "2024-05", "tbs": 10, "netra": 0}, {"month": "2024-06", "tbs": 7, "netra": 0}, {"month": "2024-07", "tbs": 8, "netra": 0}, {"month": "2024-08", "tbs": 11, "netra": 0}, {"month": "2024-09", "tbs": 6, "netra": 0}, {"month": "2024-10", "tbs": 9, "netra": 0}, {"month": "2024-11", "tbs": 8, "netra": 0}, {"month": "2024-12", "tbs": 1, "netra": 0}, {"month": "2025-01", "tbs": 0, "netra": 2}, {"month": "2026-01", "tbs": 4, "netra": 0}, {"month": "2026-02", "tbs": 3, "netra": 0}, {"month": "2026-03", "tbs": 4, "netra": 0}, {"month": "2026-04", "tbs": 5, "netra": 0}]</script>
 <script>
-/* ---------------- Interactive byline chart ----------------
-   Renders a stacked bar chart from content/timeline.json.
-   Pure SVG, no external libs. Hover = tooltip. Click year pill = filter. */
+(function initTheme() {
+  const saved = localStorage.getItem('miraz-theme');
+  if (saved === 'dark' || saved === 'light') {
+    document.documentElement.setAttribute('data-theme', saved);
+  }
+})();
 
-const svg = document.getElementById('chart-svg');
-const tip = document.getElementById('chart-tooltip');
-let DATA = [], ACTIVE_YEAR = null;
-
-Promise.resolve(JSON.parse(document.getElementById('inline-timeline-data').textContent)).then(data => {
-  DATA = data;
-  const years = [...new Set(data.map(d => d.month.slice(0,4)))].sort();
-  const pillBox = document.getElementById('year-pills');
-  pillBox.innerHTML = ['all', ...years].map(y => `<button class="hero-cta" data-year="${y}" style="margin:0;">${y}</button>`).join('');
-  pillBox.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-    const y = b.dataset.year;
-    ACTIVE_YEAR = (y === 'all') ? null : y;
-    pillBox.querySelectorAll('button').forEach(x => x.style.borderColor = '');
-    b.style.borderColor = 'var(--accent-teal)';
-    render();
-  }));
-  // default active
-  pillBox.querySelector('[data-year="all"]').style.borderColor = 'var(--accent-teal)';
-  render();
-  updateStats(data);
-});
-
-function updateStats(all) {
-  const totalT = all.reduce((s,d) => s+d.tbs, 0);
-  const totalN = all.reduce((s,d) => s+d.netra, 0);
-  const total = totalT + totalN;
-  document.getElementById('stat-total').textContent = total;
-  document.getElementById('stat-months').textContent = all.length;
-  const peak = all.reduce((p,d) => (d.tbs+d.netra > (p.tbs+p.netra||0) ? d : p), {});
-  document.getElementById('stat-peak').textContent = peak.month || '—';
-  document.getElementById('stat-avg').textContent = all.length ? (total/all.length).toFixed(1) : '—';
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('miraz-theme', next);
 }
 
-function render() {
-  svg.innerHTML = '';
-  const filtered = ACTIVE_YEAR ? DATA.filter(d => d.month.startsWith(ACTIVE_YEAR)) : DATA;
+function bindThemeToggle() {
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', toggleTheme);
+}
 
-  const W = 900, H = 280, PAD_L = 40, PAD_R = 12, PAD_T = 12, PAD_B = 40;
-  const plotW = W - PAD_L - PAD_R;
-  const plotH = H - PAD_T - PAD_B;
-  const maxVal = Math.max(...filtered.map(d => d.tbs + d.netra), 1);
+function initModernNav() {
+  const more = document.querySelector('.nav-more');
+  const btn = document.getElementById('navMoreBtn');
 
-  // Gridlines + y-axis labels
-  for (let i = 0; i <= 4; i++) {
-    const y = PAD_T + (plotH * i / 4);
-    const val = Math.round(maxVal * (1 - i/4));
-    svg.insertAdjacentHTML('beforeend',
-      `<line x1="${PAD_L}" y1="${y}" x2="${W-PAD_R}" y2="${y}" stroke="currentColor" stroke-opacity="0.08" stroke-width="0.5"/>
-       <text x="${PAD_L-6}" y="${y+3}" text-anchor="end" font-family="DM Mono, monospace" font-size="9" fill="currentColor" opacity="0.4">${val}</text>`);
+  if (btn) {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      more.classList.toggle('is-open');
+    });
   }
 
-  const barW = plotW / filtered.length;
-  const gap = Math.min(barW * 0.18, 3);
-
-  filtered.forEach((d, i) => {
-    const x = PAD_L + i * barW + gap/2;
-    const w = Math.max(barW - gap, 1);
-    const totalV = d.tbs + d.netra;
-    const totalH = (totalV / maxVal) * plotH;
-    const tbsH = (d.tbs / maxVal) * plotH;
-    const netraH = (d.netra / maxVal) * plotH;
-    const baseY = PAD_T + plotH;
-
-    // TBS bar (bottom)
-    svg.insertAdjacentHTML('beforeend',
-      `<rect x="${x}" y="${baseY - tbsH}" width="${w}" height="${tbsH}" fill="#0f766e"
-         data-month="${d.month}" data-tbs="${d.tbs}" data-netra="${d.netra}" style="cursor:pointer;transition:opacity 0.15s;" opacity="0.9"/>`);
-    // Netra bar (top)
-    if (d.netra > 0) {
-      svg.insertAdjacentHTML('beforeend',
-        `<rect x="${x}" y="${baseY - tbsH - netraH}" width="${w}" height="${netraH}" fill="#b45309"
-          data-month="${d.month}" data-tbs="${d.tbs}" data-netra="${d.netra}" style="cursor:pointer;transition:opacity 0.15s;" opacity="0.9"/>`);
-    }
-
-    // Year labels on first month of each year
-    if (d.month.endsWith('-01') || i === 0) {
-      svg.insertAdjacentHTML('beforeend',
-        `<text x="${x + w/2}" y="${H - 12}" text-anchor="middle" font-family="DM Mono, monospace" font-size="9" fill="currentColor" opacity="0.5">${d.month.slice(0,4)}</text>`);
+  document.addEventListener('click', e => {
+    if (!more.contains(e.target)) {
+      more.classList.remove('is-open');
     }
   });
 
-  // Hover interactions
-  svg.querySelectorAll('rect').forEach(r => {
-    r.addEventListener('mouseenter', (e) => {
-      r.setAttribute('opacity', '1');
-      const m = r.dataset.month, t = r.dataset.tbs, n = r.dataset.netra;
-      tip.innerHTML = `<strong style="font-family:'DM Serif Display',serif;font-size:13px;">${m}</strong><br>TBS: ${t} &nbsp;·&nbsp; Netra: ${n}<br><span style="color:var(--accent-teal)">total: ${parseInt(t)+parseInt(n)}</span>`;
-      tip.classList.add('is-visible');
-    });
-    r.addEventListener('mousemove', (e) => {
-      const wrap = svg.parentElement.getBoundingClientRect();
-      tip.style.left = (e.clientX - wrap.left + 12) + 'px';
-      tip.style.top  = (e.clientY - wrap.top - 40) + 'px';
-    });
-    r.addEventListener('mouseleave', () => {
-      r.setAttribute('opacity', '0.9');
-      tip.classList.remove('is-visible');
-    });
+  const current = window.location.pathname.split('/').pop();
+  document.querySelectorAll('.nav-main a, .nav-dropdown a').forEach(link => {
+    if (link.getAttribute('href') === current) {
+      link.classList.add('is-active');
+    }
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  bindThemeToggle();
+  initModernNav();
+});
 </script>
+
 </body>
 </html>
