@@ -66,15 +66,29 @@ function initModernNav() {
   }
 
   const current = window.location.pathname.split('/').pop() || 'index.html';
+  const bodyPage = document.body && document.body.dataset ? document.body.dataset.page : '';
+  const pageAliases = {
+    projects: 'projects.html'
+  };
   const navLinks = document.querySelectorAll('.nav-main a, .nav-dropdown a');
+  let matched = false;
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
 
     if (href === current || (current === '' && href === 'index.html')) {
       link.classList.add('is-active');
+      matched = true;
     }
   });
+
+  if (!matched && pageAliases[bodyPage]) {
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === pageAliases[bodyPage]) {
+        link.classList.add('is-active');
+      }
+    });
+  }
 }
 
 // ---------- REVEAL ON SCROLL ----------
