@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&family=Instrument+Sans:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body data-page="projects">
 <nav class="nav-modern" id="siteNav">
   <div class="nav-inner">
     <div class="nav-left">
@@ -76,11 +76,16 @@
       </div>
     </section>
 
-    <section class="project-content-grid">
+    <section class="project-content-grid report-grid">
       <article class="story-card reveal">
-        <h2>What the story argues</h2>
-        <p>The core argument is simple: young unmarried professionals in Dhaka are often pushed into a shadow housing market where they pay more, get less, and absorb a stack of hidden costs that families do not face in the same way. The project combines lived experience with rental data, interview reporting, and broader labour-market context.</p>
-        <div class="story-pullquote">Housing becomes a penalty when marital status determines whether you can enter the formal market at all.</div>
+        <div class="story-byline">
+          <span>Reported feature adaptation</span>
+          <span>Dhaka housing</span>
+          <span>Data + interviews + explanatory visuals</span>
+        </div>
+        <p class="story-lead">At the edge of formal rental life in Dhaka, unmarried young workers often enter a different market altogether. They do not rent homes so much as negotiate for tolerable crowding: a partitioned corner, a shared mess seat, a negotiated meal rate, a bundle of invisible service costs, and a monthly remainder too thin to feel like adulthood.</p>
+        <p>This story follows that squeeze. It begins with cramped rooms and hurried mornings, then moves outward into a wider structure of exclusion: landlords who do not want bachelors, flat owners who can earn more by selling beds than space, wages that have barely moved, and a graduate economy where the idea of living alone becomes a luxury instead of a basic transition.</p>
+        <div class="story-pullquote">The bachelor penalty is not only social stigma. It is a pricing system.</div>
         <div class="story-kpis">
           <div class="story-kpi">
             <strong>up to 90</strong>
@@ -97,6 +102,30 @@
           <div class="story-kpi">
             <strong>20k-25k</strong>
             <span>Sticky entry salary range</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal">
+        <h2>The everyday scene</h2>
+        <div class="story-split">
+          <div>
+            <p>In the original report, the story opens at 6:30 AM with Tanvir Ahmed waking up in a plywood-partitioned cabin in a dining room. That opening works because it makes the economics physical. The costs are not abstract. They shape sleep, privacy, morning routines, access to a bathroom, food choices, and the amount of money left after one ordinary commute.</p>
+            <p>That is the right tone for a journalism project page too. People should be able to read it like a feature story first, then use the visuals to see scale, change, and comparison. The interaction should clarify the reporting, not replace it.</p>
+          </div>
+          <div class="story-stat-stack">
+            <div class="story-note-card">
+              <strong>Tanvir's room</strong>
+              <p>A 42 sq. ft. partitioned space with no window, rented as survival rather than choice.</p>
+            </div>
+            <div class="story-note-card">
+              <strong>Raihan's compromise</strong>
+              <p>A shared arrangement with three others that lowers cost only by erasing privacy.</p>
+            </div>
+            <div class="story-note-card">
+              <strong>What changes</strong>
+              <p>The more insecure the rental access, the more daily life gets reorganized around scarcity.</p>
+            </div>
           </div>
         </div>
       </article>
@@ -167,6 +196,50 @@
         </div>
       </section>
 
+      <section class="interactive-panel reveal" aria-labelledby="budget-title">
+        <div class="interactive-head">
+          <div>
+            <p class="interactive-label">Interactive module</p>
+            <h3 id="budget-title">Read three monthly survival budgets</h3>
+          </div>
+          <p class="mini-note">Profile-based illustration built from the reporting logic of the story.</p>
+        </div>
+        <div class="interactive-grid">
+          <div class="interactive-stage">
+            <div class="budget-switch" id="budget-switch">
+              <button class="toggle-chip is-active" data-profile="tanvir">Tanvir</button>
+              <button class="toggle-chip" data-profile="rafsan">Rafsan</button>
+              <button class="toggle-chip" data-profile="raihan">Raihan</button>
+            </div>
+            <div class="story-kpis">
+              <div class="story-kpi">
+                <strong id="budget-salary">Tk 22,000</strong>
+                <span>Monthly income</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="budget-left">Tk 3,000</strong>
+                <span>Remainder</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="budget-housing">25%</strong>
+                <span>Spent on rent/seat</span>
+              </div>
+              <div class="story-kpi">
+                <strong id="budget-food">31%</strong>
+                <span>Spent on food</span>
+              </div>
+            </div>
+            <div class="budget-bars" id="budget-bars"></div>
+          </div>
+          <div class="interactive-controls">
+            <div class="interactive-copy">
+              <strong id="budget-headline">Tanvir has almost no slack in the month</strong>
+              <p id="budget-copy">By the time rent, food, transport, and scattered service charges are counted, the margin left for emergencies or savings is too small to feel secure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="interactive-panel reveal" aria-labelledby="neighbourhood-title">
         <div class="interactive-head">
           <div>
@@ -216,9 +289,33 @@
       </section>
 
       <article class="story-card reveal">
-        <h2>Story architecture</h2>
-        <p>The original report moves from lived experience to structure: Tanvir's room, Raihan's crowding, meal-rate inflation, graduate stagnation, the hidden service economy, and finally the policy question. That sequence works well for the web too, so this portfolio version keeps the same reporting spine while reducing the amount of uninterrupted text.</p>
-        <p>On a dedicated project page like this, people can scan the argument quickly, then slow down where they want. It reads less like a document upload and more like a designed journalistic product.</p>
+        <h2>The hidden service tax</h2>
+        <p>The reporting is especially strong when it moves beyond rent and shows how bachelor life depends on fragmented, informal payments: a maid's share, garbage pickup, building security expectations, late-night tips, volatile meal systems, and all the small cash leaks that formal housing language often ignores.</p>
+        <p>Those details matter because they change the reader's understanding of what “affordable” means. A mess seat that looks cheaper than a family flat may still be financially exhausting once these hidden costs accumulate month after month.</p>
+      </article>
+
+      <article class="story-card reveal">
+        <h2>Voices inside the structure</h2>
+        <div class="story-quote-grid">
+          <div class="story-quote-card">
+            <p>“The moment I say I am unmarried, the conversation ends.”</p>
+            <span>Tanvir Ahmed · housing access</span>
+          </div>
+          <div class="story-quote-card">
+            <p>Flat-sharing becomes a safety net when one salary cannot absorb shocks alone.</p>
+            <span>Rafsan Mahmud Hoque · monthly precarity</span>
+          </div>
+          <div class="story-quote-card">
+            <p>The city keeps pulling graduates in, even when the price of entry keeps rising.</p>
+            <span>Raihan · migration to Dhaka</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="story-card reveal">
+        <h2>How the web version is structured</h2>
+        <p>The article arc now works in three layers. First, a readable feature-story spine introduces the social world of the piece. Second, interactive visual modules show trend, budget pressure, and neighbourhood comparison. Third, methods notes at the end explain where the evidence comes from and how the analysis was framed.</p>
+        <p>That structure gives the project page the feel of a data-journalism report rather than a portfolio summary. A reader can either move straight through it like a story or pause inside the visuals and compare patterns.</p>
       </article>
 
       <article class="story-card reveal">
@@ -278,6 +375,51 @@ document.addEventListener('DOMContentLoaded', () => {
       headline: 'Prestige acts like a gatekeeping tax',
       copy: 'In Gulshan, the bachelor penalty is less about volume and more about exclusion. Solo access is rare, and subletting pushes prices into a prestige bracket.',
       note: 'Illustrative view comparing a family lease with premium sublet extraction in an elite area.'
+    }
+  };
+
+  const budgetData = {
+    tanvir: {
+      salary: 22000,
+      left: 3000,
+      housingPct: 25,
+      foodPct: 31,
+      headline: 'Tanvir has almost no slack in the month',
+      copy: 'By the time rent, food, transport, and scattered service charges are counted, the margin left for emergencies or savings is too small to feel secure.',
+      bars: [
+        { label: 'Rent / seat', value: 5500, className: 'rent' },
+        { label: 'Food / meal system', value: 6800, className: 'food' },
+        { label: 'Transport', value: 3000, className: 'transport' },
+        { label: 'Service extras', value: 3700, className: 'other' }
+      ]
+    },
+    rafsan: {
+      salary: 25000,
+      left: 4200,
+      housingPct: 24,
+      foodPct: 28,
+      headline: 'Rafsan survives by sharing the burden',
+      copy: 'The budget works only because core costs are distributed across flatmates. One unexpected expense can still destabilize the whole month.',
+      bars: [
+        { label: 'Rent / seat', value: 6000, className: 'rent' },
+        { label: 'Food / meal system', value: 7000, className: 'food' },
+        { label: 'Transport', value: 2600, className: 'transport' },
+        { label: 'Utilities + service', value: 5200, className: 'other' }
+      ]
+    },
+    raihan: {
+      salary: 20000,
+      left: 2400,
+      housingPct: 25,
+      foodPct: 33,
+      headline: 'Raihan buys affordability with density',
+      copy: 'Shared housing lowers the upfront threshold, but only by compressing personal space and keeping the end-of-month buffer painfully narrow.',
+      bars: [
+        { label: 'Rent / seat', value: 5000, className: 'rent' },
+        { label: 'Food / meal system', value: 6600, className: 'food' },
+        { label: 'Transport', value: 2400, className: 'transport' },
+        { label: 'Other costs', value: 3600, className: 'other' }
+      ]
     }
   };
 
@@ -341,8 +483,45 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.addEventListener('click', () => renderArea(chip.dataset.area));
   });
 
+  const budgetChips = Array.from(document.querySelectorAll('#budget-switch .toggle-chip'));
+  const budgetSalary = document.getElementById('budget-salary');
+  const budgetLeft = document.getElementById('budget-left');
+  const budgetHousing = document.getElementById('budget-housing');
+  const budgetFood = document.getElementById('budget-food');
+  const budgetHeadline = document.getElementById('budget-headline');
+  const budgetCopy = document.getElementById('budget-copy');
+  const budgetBars = document.getElementById('budget-bars');
+
+  function renderBudget(profileKey) {
+    const item = budgetData[profileKey];
+    const max = Math.max(...item.bars.map((bar) => bar.value));
+    budgetSalary.textContent = formatTk(item.salary);
+    budgetLeft.textContent = formatTk(item.left);
+    budgetHousing.textContent = item.housingPct + '%';
+    budgetFood.textContent = item.foodPct + '%';
+    budgetHeadline.textContent = item.headline;
+    budgetCopy.textContent = item.copy;
+    budgetBars.innerHTML = item.bars.map((bar) => `
+      <div class="budget-row">
+        <div class="budget-label">
+          <span>${bar.label}</span>
+          <span>${formatTk(bar.value)}</span>
+        </div>
+        <div class="budget-track">
+          <div class="budget-fill ${bar.className}" style="width:${(bar.value / max) * 100}%;"></div>
+        </div>
+      </div>
+    `).join('');
+    budgetChips.forEach((chip) => chip.classList.toggle('is-active', chip.dataset.profile === profileKey));
+  }
+
+  budgetChips.forEach((chip) => {
+    chip.addEventListener('click', () => renderBudget(chip.dataset.profile));
+  });
+
   renderYear(0);
   renderArea('mirpur');
+  renderBudget('tanvir');
 });
 </script>
 </body>
