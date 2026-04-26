@@ -138,7 +138,7 @@ function initRotatingTags() {
     setTimeout(() => {
       current.classList.remove('is-leaving');
     }, 700);
-  }, 4500);
+  }, 6000);
 }
 
 // ---------- LIGHTBOX ----------
