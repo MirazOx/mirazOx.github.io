@@ -32,7 +32,16 @@
           "workTitle": "Death of Local NGO",
           "type": "Reporting exercise",
           "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
-          "externalUrl": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
+          "resources": [
+            {
+              "label": "Reporting Exercise (PDF)",
+              "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
+            },
+            {
+              "label": "Published Story (TBS News)",
+              "url": "https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376"
+            }
+          ]
         },
         {
           "code": "MSJ2252",
@@ -53,7 +62,16 @@
           "workTitle": "Death of Local NGO",
           "type": "Production project",
           "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
-          "externalUrl": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
+          "resources": [
+            {
+              "label": "Reporting Exercise (PDF)",
+              "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
+            },
+            {
+              "label": "Published Story (TBS News)",
+              "url": "https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376"
+            }
+          ]
         },
         {
           "code": "MSJ3152",
