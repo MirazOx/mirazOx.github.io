@@ -15,6 +15,16 @@
           "externalUrl": "/assets/showcase/MSJ2251_Analytical_Report.pdf"
         },
         {
+          "code": "MSJ2251",
+          "name": "Journalism and Society",
+          "session": "Summer 2026",
+          "grade": "A+",
+          "workTitle": "Reading Dossier",
+          "type": "Reading dossier",
+          "desc": "A reading dossier connecting journalism, institutions, public accountability, and the social role of the press.",
+          "externalUrl": "/assets/showcase/MSJ2251_Journalism_and_Society_Reading_Dossier.pdf"
+        },
+        {
           "code": "MSJ3151",
           "name": "News Sourcing and Gathering",
           "session": "Spring 2026",
