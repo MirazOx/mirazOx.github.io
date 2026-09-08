@@ -174,7 +174,7 @@
           "workTitle": "Press Freedom on Trial",
           "type": "Comparative legal analysis",
           "desc": "A comparative legal analysis examining how Bangladesh’s Digital Security Act (DSA) and Pakistan’s PECA weaponise cybercrime law against journalism.",
-          "externalUrl": "/assets/showcase/MSJ4101_Press_Freedom_on_Trial.docx",
+          "externalUrl": "/assets/showcase/MSJ4101_Press_Freedom_on_Trial.pdf",
           "linkLabel": "Open analysis"
         },
         {
@@ -386,17 +386,17 @@
           "tier": "Arts & Humanities",
           "session": "Fall 2025",
           "grade": "A+",
-          "workTitle": "Om-Dar-B-Dar Video Essay",
-          "type": "Video essay",
-          "desc": "A film-studies coursework document on form, feeling, and visual interpretation.",
+          "workTitle": "When the Centre Cannot Hold",
+          "type": "Video essay & Analysis",
+          "desc": "A film-studies coursework video essay and analytical paper on form, feeling, and visual interpretation.",
           "resources": [
             {
-              "label": "Om-Dar-B-Dar Video Essay",
-              "url": "/assets/showcase/HUM3101_Om_Dar_B_Dar_Video_Essay.docx"
+              "label": "Video Essay (YouTube)",
+              "url": "https://www.youtube.com/watch?v=icd3LvUKOR8"
             },
             {
-              "label": "HUM3101 Article",
-              "url": "/assets/showcase/HUM3101_Om_Dar_B_Dar_Video_Essay.docx"
+              "label": "Analytical Essay (PDF)",
+              "url": "/assets/showcase/HUM3101_When_the_Centre_Cannot_Hold.pdf"
             }
           ]
         },
