@@ -162,7 +162,7 @@ function renderSelectedWriting(items) {
   if (window.__reInitReveal) window.__reInitReveal();
 }
 
-fetch('/content/writing-selected.json?v=3')
+fetch('/content/writing-selected.json?v=4')
   .then(response => {
     if (!response.ok) throw new Error('Could not load selected writing');
     return response.json();
