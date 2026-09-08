@@ -21,7 +21,8 @@
               "label": "Analytical Report",
               "url": "/assets/showcase/MSJ2251_Analytical_Report.pdf"
             }
-          ]
+          ],
+          "hideFromHighlights": true
         },
         {
           "code": "MSJ3151",
