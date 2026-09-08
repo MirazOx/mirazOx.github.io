@@ -31,15 +31,11 @@
           "grade": "A+",
           "workTitle": "Death of Local NGO",
           "type": "Reporting exercise",
-          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
+          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails. <br><br><a href=\"https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376\" target=\"_blank\" style=\"color: var(--accent-teal); text-decoration: underline; font-weight: 500;\">Read published story on TBS ↗</a>",
           "resources": [
             {
               "label": "Reporting Exercise (PDF)",
               "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
-            },
-            {
-              "label": "Published Story (TBS News)",
-              "url": "https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376"
             }
           ]
         },
@@ -61,15 +57,11 @@
           "grade": "Not taken yet",
           "workTitle": "Death of Local NGO",
           "type": "Production project",
-          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
+          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails. <br><br><a href=\"https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376\" target=\"_blank\" style=\"color: var(--accent-teal); text-decoration: underline; font-weight: 500;\">Read published story on TBS ↗</a>",
           "resources": [
             {
               "label": "Reporting Exercise (PDF)",
               "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
-            },
-            {
-              "label": "Published Story (TBS News)",
-              "url": "https://www.tbsnews.net/features/panorama/how-bangladeshs-local-ngos-are-surviving-foreign-aid-collapse-1435376"
             }
           ]
         },
