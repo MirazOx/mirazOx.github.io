@@ -12,17 +12,17 @@
           "workTitle": "Journalism and Society Reading Dossier",
           "type": "Reading dossier",
           "desc": "A reading dossier connecting journalism, institutions, public accountability, and the social role of the press.",
-          "externalUrl": "https://docs.google.com/document/d/1SgKI6JZOFJJBoaipDnql9l6hggteoHdM/edit?usp=drivesdk&rtpof=true&sd=true"
+          "externalUrl": "/assets/showcase/MSJ2251_Journalism_and_Society_Reading_Dossier.pdf"
         },
         {
           "code": "MSJ3151",
           "name": "News Sourcing and Gathering",
           "session": "Spring 2026",
           "grade": "A+",
-          "workTitle": "After the Aid",
+          "workTitle": "Death of Local NGO",
           "type": "Reporting exercise",
-          "desc": "A sourcing and gathering coursework document built around source maps, interview trails, and a compact reporting workflow.",
-          "externalUrl": "/assets/showcase/MSJ3151_After_the_Aid_duplicate_1.docx"
+          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
+          "externalUrl": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
         },
         {
           "code": "MSJ2252",
@@ -40,9 +40,10 @@
           "name": "Mobile Journalism",
           "session": "TBD",
           "grade": "Not taken yet",
-          "workTitle": "Mobile-first Story Package",
+          "workTitle": "Death of Local NGO",
           "type": "Production project",
-          "desc": "A slot for mobile reporting, filming, editing, and publishing workflow."
+          "desc": "A sourcing and gathering coursework document investigating the collapse of local NGOs and analyzing field data trails.",
+          "externalUrl": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
         },
         {
           "code": "MSJ3152",
@@ -144,7 +145,7 @@
           "grade": "A+",
           "workTitle": "Press Freedom on Trial",
           "type": "Comparative legal analysis",
-          "desc": "A comparative legal analysis examining how Bangladesh\u2019s Digital Security Act (DSA) and Pakistan\u2019s PECA weaponise cybercrime law against journalism.",
+          "desc": "A comparative legal analysis examining how Bangladesh’s Digital Security Act (DSA) and Pakistan’s PECA weaponise cybercrime law against journalism.",
           "externalUrl": "/assets/showcase/MSJ4101_Press_Freedom_on_Trial.docx",
           "linkLabel": "Open analysis"
         },
@@ -196,7 +197,7 @@
           "grade": "A",
           "workTitle": "The Politics Embedded in Technical Systems",
           "type": "Theory essay",
-          "desc": "An analytical coursework essay applying Langdon Winner\u2019s framework of technological politics to algorithmic content distribution systems.",
+          "desc": "An analytical coursework essay applying Langdon Winner’s framework of technological politics to algorithmic content distribution systems.",
           "externalUrl": "/assets/showcase/The_Politics_of_Promoting_Gender_Equity.pdf",
           "linkLabel": "Open essay"
         }
@@ -563,13 +564,13 @@
   "education": [
     {
       "institution": "University of Liberal Arts Bangladesh (ULAB)",
-      "detail": "BSS in Media Studies and Journalism \u00b7 Major: Digital Journalism \u00b7 Minor: Computer Science",
-      "date": "2023\u20132027"
+      "detail": "BSS in Media Studies and Journalism · Major: Digital Journalism · Minor: Computer Science",
+      "date": "2023–2027"
     },
     {
       "institution": "University of Dhaka",
-      "detail": "BA in English \u00b7 President, English Dept. Art & Literary Club (2022\u201323)",
-      "date": "2017\u20132023"
+      "detail": "BA in English · President, English Dept. Art & Literary Club (2022–23)",
+      "date": "2017–2023"
     }
   ]
 }
