@@ -9,20 +9,19 @@
           "name": "Journalism and Society",
           "session": "Summer 2026",
           "grade": "A+",
-          "workTitle": "Reading Dossier",
-          "type": "Reading dossier",
-          "desc": "A reading dossier connecting journalism, institutions, public accountability, and the social role of the press.",
-          "externalUrl": "/assets/showcase/MSJ2251_Journalism_and_Society_Reading_Dossier.pdf"
-        },
-        {
-          "code": "MSJ2251",
-          "name": "Journalism and Society",
-          "session": "Summer 2026",
-          "grade": "A+",
-          "workTitle": "Analytical Report",
-          "type": "Analytical report",
-          "desc": "An analytical coursework report connecting journalism, institutions, public accountability, and the social role of the press.",
-          "externalUrl": "/assets/showcase/MSJ2251_Analytical_Report.pdf"
+          "workTitle": "Coursework Portfolio",
+          "type": "Reading dossier & Report",
+          "desc": "A reading dossier and analytical report connecting journalism, institutions, public accountability, and the social role of the press.",
+          "resources": [
+            {
+              "label": "Reading Dossier",
+              "url": "/assets/showcase/MSJ2251_Journalism_and_Society_Reading_Dossier.pdf"
+            },
+            {
+              "label": "Analytical Report",
+              "url": "/assets/showcase/MSJ2251_Analytical_Report.pdf"
+            }
+          ]
         },
         {
           "code": "MSJ3151",
