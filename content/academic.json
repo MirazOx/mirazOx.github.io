@@ -362,9 +362,10 @@
           "name": "Ethics",
           "session": "Summer 2024",
           "grade": "A",
-          "workTitle": "Ethics Case Notebook",
-          "type": "Case notes",
-          "desc": "A slot for ethical reasoning across public life and professional practice."
+          "workTitle": "The Convenient Skeptic",
+          "type": "Ethics Essay",
+          "desc": "An analytical essay examining ethical reasoning and moral dilemmas in public and professional life.",
+          "externalUrl": "/assets/showcase/UCC1202_The_Convenient_Skeptic.pdf"
         }
       ]
     },
@@ -532,9 +533,10 @@
           "tier": "Natural Sciences",
           "session": "Summer 2026",
           "grade": "A",
-          "workTitle": "Public Health Explainers",
+          "workTitle": "The Second Epidemic",
           "type": "Science communication",
-          "desc": "A slot for health data, epidemiological reasoning, and public explanation."
+          "desc": "An analytical coursework essay exploring public health crises and epidemiological reasoning.",
+          "externalUrl": "/assets/showcase/NSC3282_The_Second_Epidemic.pdf"
         }
       ]
     },
