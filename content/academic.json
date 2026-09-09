@@ -184,11 +184,20 @@
           "name": "Convergence Communication 1",
           "session": "Spring 2025",
           "grade": "A+",
-          "workTitle": "Convergence Communication I Production Notebook",
-          "type": "Production notebook",
-          "desc": "A production notebook connecting scripting, planning, shooting, editing, and reflection.",
+          "workTitle": "The Louder Signifier",
+          "type": "Seminar paper & Video",
+          "desc": "A convergence communication project comprising a video presentation and a seminar paper.",
           "media": "video",
-          "externalUrl": "/assets/showcase/MSJ2102_Convergence_Communication_I_Production_Notebook.docx"
+          "resources": [
+            {
+              "label": "Video Presentation (YouTube)",
+              "url": "https://youtu.be/U1ZOCw_94j0"
+            },
+            {
+              "label": "Seminar Paper (PDF)",
+              "url": "/assets/showcase/The_Louder_Signifier_Seminar_Paper.pdf"
+            }
+          ]
         },
         {
           "code": "MSJ2202",
