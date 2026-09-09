@@ -407,10 +407,19 @@
           "tier": "Social Sciences",
           "session": "Fall 2024",
           "grade": "A+",
-          "workTitle": "The Long Shadow of Night and Fog",
-          "type": "Analytical essay",
-          "desc": "An anthropology coursework essay using cultural analysis, memory, and representation as its frame.",
-          "externalUrl": "/assets/showcase/SSC2149_The_Long_Shadow_of_Night_and_Fog.pdf"
+          "workTitle": "State Play Poster & Critical Essay",
+          "type": "Poster & Analytical essay",
+          "desc": "An anthropology coursework project featuring a visual poster presentation and an analytical essay using cultural analysis, memory, and representation as its frame.",
+          "resources": [
+            {
+              "label": "Poster Presentation (Image)",
+              "url": "/assets/showcase/SSC2149_State_Play_Poster.jpg"
+            },
+            {
+              "label": "Critical Essay (PDF)",
+              "url": "/assets/showcase/SSC2149_The_Long_Shadow_of_Night_and_Fog.pdf"
+            }
+          ]
         },
         {
           "code": "SSC3150",
