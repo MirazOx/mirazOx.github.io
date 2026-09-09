@@ -410,7 +410,7 @@ function renderCourseMap() {
   host.innerHTML = sections || '<p class="result-count">No coursework matched that search.</p>';
 }
 
-fetch('/content/academic.json?v=32')
+fetch('/content/academic.json?v=33')
   .then(response => {
     if (!response.ok) throw new Error('Could not load academic content');
     return response.json();
@@ -431,7 +431,7 @@ fetch('/content/academic.json?v=32')
 // Academic record ledger + selected (A+) coursework — built from the same content source.
 (function () {
   function esc(v){return String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
-  fetch('/content/academic.json?v=32').then(r=>r.json()).then(data=>{
+  fetch('/content/academic.json?v=33').then(r=>r.json()).then(data=>{
     const groups = data.courseGroups || [];
     let aplus = 0, a = 0, aminus = 0, completed = 0;
     const featured = [];
@@ -527,9 +527,8 @@ fetch('/content/academic.json?v=32')
     const detailsPanel = document.getElementById('courseDetailsPanel');
 
     document.getElementById('coursePanelIcon').innerHTML = data.iconSvg;
-    document.getElementById('coursePanelCode').textContent = data.code;
+    document.getElementById('coursePanelCode').textContent = data.code + ' — ' + data.name;
     document.getElementById('coursePanelTitle').textContent = data.workTitle || data.name;
-    document.getElementById('coursePanelName').textContent = data.name;
     document.getElementById('coursePanelDesc').innerHTML = data.desc || 'No description available.';
     
     const extendedSection = document.getElementById('coursePanelExtendedSection');
@@ -608,10 +607,6 @@ fetch('/content/academic.json?v=32')
     <div class="course-panel-icon" id="coursePanelIcon"></div>
     <span class="course-panel-code" id="coursePanelCode"></span>
     <h2 class="course-panel-title" id="coursePanelTitle"></h2>
-    <div class="course-panel-section">
-      <h4>Course Name</h4>
-      <p id="coursePanelName"></p>
-    </div>
     <div class="course-panel-section">
       <h4>Brief</h4>
       <p id="coursePanelDesc"></p>
