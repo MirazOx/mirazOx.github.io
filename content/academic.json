@@ -406,7 +406,7 @@
           "workTitle": "Poverty Trap Photo Essay",
           "type": "Photo essay",
           "desc": "A photography coursework document using image sequence, captioning, and visual argument to examine poverty and constraint.",
-          "externalUrl": "/assets/showcase/HUM2112_Poverty_Trap_Photo_Essay.docx",
+          "externalUrl": "/assets/showcase/HUM2112_Poverty_Trap_Photo_Essay.pdf",
           "icon": "dna"
         },
         {
@@ -418,7 +418,7 @@
           "workTitle": "Astir: Two Essays",
           "type": "History essays",
           "desc": "Two coursework essays on South Asian history, memory, and public life.",
-          "externalUrl": "/assets/showcase/HUM2204_Astir_Two_Essays.docx",
+          "externalUrl": "/assets/showcase/HUM2204_Astir_Two_Essays.pdf",
           "icon": "feather"
         },
         {
@@ -427,11 +427,20 @@
           "tier": "Arts & Humanities",
           "session": "Spring 2025",
           "grade": "A",
-          "workTitle": "Great Expectations",
-          "type": "Analytical essay",
-          "desc": "A humanities coursework essay built around close reading, argument, and interpretation.",
-          "externalUrl": "https://docs.google.com/document/d/1CsL13-hKb9fg_iPrjZAljUsWGvnhAk9l/edit?usp=drivesdk&rtpof=true&sd=true",
-          "icon": "terminal"
+          "workTitle": "Great Expectations & The City of Happiness",
+          "type": "Analytical essays",
+          "desc": "Two humanities coursework essays built around close reading, argument, and philosophical interpretation.",
+          "icon": "terminal",
+          "resources": [
+            {
+              "label": "Great Expectations",
+              "url": "/assets/showcase/HUM2111_Great_Expectations.docx"
+            },
+            {
+              "label": "The City of Happiness (PDF)",
+              "url": "/assets/showcase/HUM2111_The_City_of_Happiness.pdf"
+            }
+          ]
         },
         {
           "code": "HUM3101",
