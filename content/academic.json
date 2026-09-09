@@ -174,10 +174,19 @@
           "name": "Mass Communication",
           "session": "Spring 2025",
           "grade": "A",
-          "workTitle": "Mass Communication Theory Notebook",
-          "type": "Theory notebook",
-          "desc": "A theory notebook covering models, institutions, effects, and public communication debates.",
-          "externalUrl": "/assets/showcase/MSJ2201_Mass_Communication_Theory_Notebook.docx"
+          "workTitle": "The Puppet Mouth",
+          "type": "Prop Design & Theory Notebook",
+          "desc": "A mass communication coursework project featuring a custom prop mask design and a theory notebook covering models, institutions, effects, and public communication debates.",
+          "resources": [
+            {
+              "label": "Mask Design (Image)",
+              "url": "/assets/showcase/MSJ2201_Mask.jpg"
+            },
+            {
+              "label": "The Puppet Mouth (PDF)",
+              "url": "/assets/showcase/MSJ2201_The_Puppet_Mouth.pdf"
+            }
+          ]
         },
         {
           "code": "MSJ2102",
