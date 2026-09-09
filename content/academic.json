@@ -240,7 +240,7 @@
           "workTitle": "The Politics Embedded in Technical Systems",
           "type": "Theory essay",
           "desc": "An analytical coursework essay applying Langdon Winner’s framework of technological politics to algorithmic content distribution systems.",
-          "externalUrl": "/assets/showcase/The_Politics_of_Promoting_Gender_Equity.pdf",
+          "externalUrl": "/assets/showcase/MSJ2101_Algorithmic_Content_Distribution.pdf",
           "linkLabel": "Open essay"
         }
       ]
@@ -333,9 +333,19 @@
           "name": "Bangla Bhasha O Sahitya",
           "session": "Fall 2023",
           "grade": "A-",
-          "workTitle": "Language and Literature Notebook",
-          "type": "Coursework slot",
-          "desc": "A slot for Bangla language, literature, and cultural grounding."
+          "workTitle": "Tagore in the 21st Century",
+          "type": "Literature essay",
+          "desc": "An analytical essay exploring the relevance of Rabindranath Tagore's philosophy and literature in the 21st century.",
+          "resources": [
+            {
+              "label": "Read in English (PDF)",
+              "url": "/assets/showcase/UCC1101_Tagore_English.pdf"
+            },
+            {
+              "label": "Read in Bengali (PDF)",
+              "url": "/assets/showcase/UCC1101_Tagore_Bengali.pdf"
+            }
+          ]
         },
         {
           "code": "UCC1201",
