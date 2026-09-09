@@ -22,7 +22,8 @@
               "url": "/assets/showcase/MSJ2251_Analytical_Report.pdf"
             }
           ],
-          "hideFromHighlights": true
+          "hideFromHighlights": true,
+          "icon": "globe"
         },
         {
           "code": "MSJ3151",
@@ -37,7 +38,8 @@
               "label": "Reporting Exercise (PDF)",
               "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
             }
-          ]
+          ],
+          "icon": "database"
         },
         {
           "code": "MSJ2252",
@@ -48,7 +50,8 @@
           "type": "Framework essay",
           "desc": "A Digital Audience coursework essay on audience extraction, platform design, and the economics of attention.",
           "projectUrl": "/projects/easeparenting/",
-          "externalUrl": "/assets/showcase/MSJ2252_The_Extracted_Audience.pdf"
+          "externalUrl": "/assets/showcase/MSJ2252_The_Extracted_Audience.pdf",
+          "icon": "book-open"
         },
         {
           "code": "MSJ3151",
@@ -63,7 +66,8 @@
               "label": "Reporting Exercise (PDF)",
               "url": "/assets/showcase/MSJ3151_Death_of_Local_NGO.pdf"
             }
-          ]
+          ],
+          "icon": "library"
         },
         {
           "code": "MSJ3152",
@@ -72,7 +76,8 @@
           "grade": "Not taken yet",
           "workTitle": "Online Story Architecture",
           "type": "Digital package",
-          "desc": "A slot for web-first story design, linking, structure, and multimedia packaging."
+          "desc": "A slot for web-first story design, linking, structure, and multimedia packaging.",
+          "icon": "scale"
         },
         {
           "code": "MSJ3253",
@@ -82,7 +87,8 @@
           "workTitle": "The Bachelor Economy",
           "type": "Data journalism project",
           "desc": "A data-journalism coursework document on bachelor housing, cost pressure, and the everyday economics of living solo in Dhaka.",
-          "externalUrl": "/assets/showcase/MSJ3253_The_Bachelor_Economy.pdf"
+          "externalUrl": "/assets/showcase/MSJ3253_The_Bachelor_Economy.pdf",
+          "icon": "camera"
         },
         {
           "code": "MSJ3252",
@@ -91,7 +97,8 @@
           "grade": "Registered",
           "workTitle": "Editing Desk Portfolio",
           "type": "Editing portfolio",
-          "desc": "A slot for headline discipline, translation judgement, and copy-editing decisions."
+          "desc": "A slot for headline discipline, translation judgement, and copy-editing decisions.",
+          "icon": "layers"
         },
         {
           "code": "MSJ4151",
@@ -101,7 +108,8 @@
           "workTitle": "Investigation Design Dossier",
           "type": "Reporting dossier",
           "desc": "A dossier for source protection, evidence chains, investigation planning, and the architecture of a serious reporting project.",
-          "externalUrl": "https://docs.google.com/document/d/1VgyX-4gaaNTNU3MBEAxjNKaIzSkkHER6/edit?usp=drivesdk&rtpof=true&sd=true"
+          "externalUrl": "https://docs.google.com/document/d/1VgyX-4gaaNTNU3MBEAxjNKaIzSkkHER6/edit?usp=drivesdk&rtpof=true&sd=true",
+          "icon": "tv"
         },
         {
           "code": "MSJ4152",
@@ -130,7 +138,8 @@
               "label": "Production Report on Loan Trap",
               "url": "/assets/showcase/Production Report on Loan Trap .pdf"
             }
-          ]
+          ],
+          "icon": "laptop"
         }
       ]
     },
@@ -146,7 +155,8 @@
           "workTitle": "Theory Notebook",
           "type": "Concept map",
           "desc": "A theory notebook for the core vocabulary of communication study.",
-          "externalUrl": "/assets/showcase/MSJ1101_Theory_Notebook.pdf"
+          "externalUrl": "/assets/showcase/MSJ1101_Theory_Notebook.pdf",
+          "icon": "leaf"
         },
         {
           "code": "MSJ1201",
@@ -156,7 +166,8 @@
           "workTitle": "Misinformation Science Reporting Proposal",
           "type": "Research proposal",
           "desc": "A communication research proposal on misinformation, science reporting, and public understanding.",
-          "externalUrl": "/assets/showcase/MSJ1201_Misinformation_Science_Reporting_Proposal.pdf"
+          "externalUrl": "/assets/showcase/MSJ1201_Misinformation_Science_Reporting_Proposal.pdf",
+          "icon": "code"
         },
         {
           "code": "MSJ4101",
@@ -167,7 +178,8 @@
           "type": "Comparative legal analysis",
           "desc": "A comparative legal analysis examining how Bangladesh’s Digital Security Act (DSA) and Pakistan’s PECA weaponise cybercrime law against journalism.",
           "externalUrl": "/assets/showcase/MSJ4101_Press_Freedom_on_Trial.pdf",
-          "linkLabel": "Open analysis"
+          "linkLabel": "Open analysis",
+          "icon": "scroll"
         },
         {
           "code": "MSJ2201",
@@ -190,7 +202,8 @@
               "label": "Critical Note (PDF)",
               "url": "/assets/showcase/MSJ2201_Critical_Note.pdf"
             }
-          ]
+          ],
+          "icon": "bar-chart"
         },
         {
           "code": "MSJ2102",
@@ -210,7 +223,8 @@
               "label": "Seminar Paper (PDF)",
               "url": "/assets/showcase/The_Louder_Signifier_Seminar_Paper.pdf"
             }
-          ]
+          ],
+          "icon": "briefcase"
         },
         {
           "code": "MSJ2202",
@@ -230,7 +244,8 @@
               "label": "Project Documentation",
               "url": "/assets/showcase/MSJ2202_STILL_Video_Art.pdf"
             }
-          ]
+          ],
+          "icon": "file-text"
         },
         {
           "code": "MSJ2101",
@@ -241,7 +256,8 @@
           "type": "Theory essay",
           "desc": "An analytical coursework essay applying Langdon Winner’s framework of technological politics to algorithmic content distribution systems.",
           "externalUrl": "/assets/showcase/MSJ2101_Algorithmic_Content_Distribution.pdf",
-          "linkLabel": "Open essay"
+          "linkLabel": "Open essay",
+          "icon": "edit"
         }
       ]
     },
@@ -262,7 +278,8 @@
               "label": "Academic English I Essay",
               "url": "/assets/showcase/GEF1101_The_Grammar_of_Honest_Writing.pdf"
             }
-          ]
+          ],
+          "icon": "film"
         },
         {
           "code": "GEF1201",
@@ -277,7 +294,8 @@
               "label": "Academic English II Essay",
               "url": "/assets/showcase/GEF1201_The_Exam_Passed_the_Mind_Unchanged.pdf"
             }
-          ]
+          ],
+          "icon": "users"
         },
         {
           "code": "GEF2101",
@@ -296,7 +314,8 @@
               "label": "Statistics for Newsroom Decisions",
               "url": "/assets/showcase/GEF2101_Statistics_for_Newsroom_Decisions.docx"
             }
-          ]
+          ],
+          "icon": "pie-chart"
         },
         {
           "code": "GEF2203",
@@ -305,7 +324,8 @@
           "grade": "Not taken yet",
           "workTitle": "Advanced Bangla Writing Portfolio",
           "type": "Writing portfolio",
-          "desc": "Bangla-language writing practice for clarity, argument, and public communication."
+          "desc": "Bangla-language writing practice for clarity, argument, and public communication.",
+          "icon": "trees"
         },
         {
           "code": "GEF1202",
@@ -320,7 +340,8 @@
               "label": "Feature Page Layout PDF",
               "url": "/pdfs/advanced-english-writing-feature-layout.pdf"
             }
-          ]
+          ],
+          "icon": "lightbulb"
         }
       ]
     },
@@ -345,7 +366,8 @@
               "label": "Read in Bengali (PDF)",
               "url": "/assets/showcase/UCC1101_Tagore_Bengali.pdf"
             }
-          ]
+          ],
+          "icon": "clipboard"
         },
         {
           "code": "UCC1201",
@@ -355,7 +377,8 @@
           "workTitle": "From Monument to Feed",
           "type": "History Essay",
           "desc": "An analytical essay exploring the evolution of public memory and national history, tracing the narrative shift from physical monuments to digital feeds.",
-          "externalUrl": "/assets/showcase/UCC1201_From_Monument_to_Feed.pdf"
+          "externalUrl": "/assets/showcase/UCC1201_From_Monument_to_Feed.pdf",
+          "icon": "graduation-cap"
         },
         {
           "code": "UCC1202",
@@ -365,7 +388,8 @@
           "workTitle": "The Convenient Skeptic",
           "type": "Ethics Essay",
           "desc": "An analytical essay examining ethical reasoning and moral dilemmas in public and professional life.",
-          "externalUrl": "/assets/showcase/UCC1202_The_Convenient_Skeptic.pdf"
+          "externalUrl": "/assets/showcase/UCC1202_The_Convenient_Skeptic.pdf",
+          "icon": "cpu"
         }
       ]
     },
@@ -382,7 +406,8 @@
           "workTitle": "Poverty Trap Photo Essay",
           "type": "Photo essay",
           "desc": "A photography coursework document using image sequence, captioning, and visual argument to examine poverty and constraint.",
-          "externalUrl": "/assets/showcase/HUM2112_Poverty_Trap_Photo_Essay.docx"
+          "externalUrl": "/assets/showcase/HUM2112_Poverty_Trap_Photo_Essay.docx",
+          "icon": "dna"
         },
         {
           "code": "HUM2204",
@@ -393,7 +418,8 @@
           "workTitle": "Astir: Two Essays",
           "type": "History essays",
           "desc": "Two coursework essays on South Asian history, memory, and public life.",
-          "externalUrl": "/assets/showcase/HUM2204_Astir_Two_Essays.docx"
+          "externalUrl": "/assets/showcase/HUM2204_Astir_Two_Essays.docx",
+          "icon": "feather"
         },
         {
           "code": "HUM2111",
@@ -404,7 +430,8 @@
           "workTitle": "Great Expectations",
           "type": "Analytical essay",
           "desc": "A humanities coursework essay built around close reading, argument, and interpretation.",
-          "externalUrl": "https://docs.google.com/document/d/1CsL13-hKb9fg_iPrjZAljUsWGvnhAk9l/edit?usp=drivesdk&rtpof=true&sd=true"
+          "externalUrl": "https://docs.google.com/document/d/1CsL13-hKb9fg_iPrjZAljUsWGvnhAk9l/edit?usp=drivesdk&rtpof=true&sd=true",
+          "icon": "terminal"
         },
         {
           "code": "HUM3101",
@@ -424,7 +451,8 @@
               "label": "Analytical Essay (PDF)",
               "url": "/assets/showcase/HUM3101_When_the_Centre_Cannot_Hold.pdf"
             }
-          ]
+          ],
+          "icon": "building"
         },
         {
           "code": "SSC2149",
@@ -444,7 +472,8 @@
               "label": "Critical Essay (PDF)",
               "url": "/assets/showcase/SSC2149_The_Long_Shadow_of_Night_and_Fog.pdf"
             }
-          ]
+          ],
+          "icon": "shield-alert"
         },
         {
           "code": "SSC3150",
@@ -455,7 +484,8 @@
           "workTitle": "The Miracle and the Mirror",
           "type": "Field essay",
           "desc": "A grassroots economic development essay on development narratives, local institutions, and the mirror they hold up to public policy.",
-          "externalUrl": "/assets/showcase/SSC3150_The_Miracle_and_the_Mirror.docx"
+          "externalUrl": "/assets/showcase/SSC3150_The_Miracle_and_the_Mirror.docx",
+          "icon": "pen-tool"
         },
         {
           "code": "SSC2252",
@@ -466,7 +496,8 @@
           "workTitle": "Whose Partition?",
           "type": "Analytical essay",
           "desc": "A conflict-studies coursework essay on partition, memory, identity, and the politics of historical ownership.",
-          "externalUrl": "https://docs.google.com/document/d/1XYUL3jjtanSS2BonWyMa4QbW58kMn5nJ/edit?usp=drivesdk&rtpof=true&sd=true"
+          "externalUrl": "https://docs.google.com/document/d/1XYUL3jjtanSS2BonWyMa4QbW58kMn5nJ/edit?usp=drivesdk&rtpof=true&sd=true",
+          "icon": "box"
         },
         {
           "code": "SSC4142",
@@ -477,7 +508,8 @@
           "workTitle": "Precarity of Food Delivery Riders",
           "type": "Research proposal",
           "desc": "A social research proposal on platform work, labour precarity, and the everyday risks facing food delivery riders.",
-          "externalUrl": "/assets/showcase/The Socio-Economic Precarity of App-Based Food Delivery Riders in Dhanmondi, Dhaka.docx"
+          "externalUrl": "/assets/showcase/The Socio-Economic Precarity of App-Based Food Delivery Riders in Dhanmondi, Dhaka.docx",
+          "icon": "map"
         },
         {
           "code": "NSC2283",
@@ -488,7 +520,8 @@
           "workTitle": "Construction Pollution Brief",
           "type": "Science brief",
           "desc": "An environmental science brief translating construction pollution and urban risk into public-facing language.",
-          "externalUrl": "/assets/showcase/NSC2283_Construction_Pollution_Brief.docx"
+          "externalUrl": "/assets/showcase/NSC2283_Construction_Pollution_Brief.docx",
+          "icon": "bookmark"
         },
         {
           "code": "NSC2282",
@@ -508,7 +541,8 @@
               "label": "The Uncounted Forest (PDF)",
               "url": "/assets/showcase/NSC2282_The_Uncounted_Forest.pdf"
             }
-          ]
+          ],
+          "icon": "compass"
         },
         {
           "code": "NSC4182",
@@ -525,7 +559,8 @@
               "title": "The Architecture of Logic: Learning Outcomes",
               "url": "/assets/showcase/Mathematics_Learning_Outcomes.pdf"
             }
-          ]
+          ],
+          "icon": "trending-up"
         },
         {
           "code": "NSC3282",
@@ -536,7 +571,8 @@
           "workTitle": "The Second Epidemic",
           "type": "Science communication",
           "desc": "An analytical coursework essay exploring public health crises and epidemiological reasoning.",
-          "externalUrl": "/assets/showcase/NSC3282_The_Second_Epidemic.pdf"
+          "externalUrl": "/assets/showcase/NSC3282_The_Second_Epidemic.pdf",
+          "icon": "radio"
         }
       ]
     },
@@ -551,7 +587,8 @@
           "grade": "Registered",
           "workTitle": "Algorithm Design Portfolio",
           "type": "Code portfolio",
-          "desc": "A slot for fundamental programming logic and algorithm design."
+          "desc": "A slot for fundamental programming logic and algorithm design.",
+          "icon": "fingerprint"
         },
         {
           "code": "CSE2301",
@@ -560,7 +597,8 @@
           "grade": "Registered",
           "workTitle": "Database Schema Design",
           "type": "Technical project",
-          "desc": "A slot for relational databases, schema design, and SQL."
+          "desc": "A slot for relational databases, schema design, and SQL.",
+          "icon": "server"
         },
         {
           "code": "CSE1202",
@@ -569,7 +607,8 @@
           "grade": "Registered",
           "workTitle": "Programming Lab Archive",
           "type": "Code portfolio",
-          "desc": "A slot for structured programming exercises and debugging practice."
+          "desc": "A slot for structured programming exercises and debugging practice.",
+          "icon": "podcast"
         },
         {
           "code": "CSE1301",
@@ -578,7 +617,8 @@
           "grade": "Not taken yet",
           "workTitle": "Data Structure Notebook",
           "type": "Code notes",
-          "desc": "A slot for arrays, lists, trees, graphs, and algorithmic thinking."
+          "desc": "A slot for arrays, lists, trees, graphs, and algorithmic thinking.",
+          "icon": "activity"
         },
         {
           "code": "CSE2203",
@@ -587,7 +627,8 @@
           "grade": "Not taken yet",
           "workTitle": "Architecture Notes",
           "type": "Technical notes",
-          "desc": "A slot for the hardware logic underneath computation."
+          "desc": "A slot for the hardware logic underneath computation.",
+          "icon": "video"
         },
         {
           "code": "CSE3201",
@@ -596,7 +637,8 @@
           "grade": "Not taken yet",
           "workTitle": "AI/ML Lab Notes",
           "type": "Technical portfolio",
-          "desc": "A slot for model logic, classification, and applied machine learning."
+          "desc": "A slot for model logic, classification, and applied machine learning.",
+          "icon": "message-square"
         },
         {
           "code": "CSE4459",
@@ -605,7 +647,8 @@
           "grade": "Not taken yet",
           "workTitle": "NLP Methods Notebook",
           "type": "Technical portfolio",
-          "desc": "A slot for text analysis methods used in research and journalism."
+          "desc": "A slot for text analysis methods used in research and journalism.",
+          "icon": "clapperboard"
         }
       ]
     },
@@ -620,7 +663,8 @@
           "grade": "Upcoming",
           "workTitle": "Internship Portfolio",
           "type": "Professional portfolio",
-          "desc": "Reserved slot for supervised professional work."
+          "desc": "Reserved slot for supervised professional work.",
+          "icon": "megaphone"
         },
         {
           "code": "MSJ4299",
@@ -629,7 +673,8 @@
           "grade": "Upcoming",
           "workTitle": "Graduation Portfolio",
           "type": "Portfolio",
-          "desc": "Reserved slot for the final academic and professional portfolio."
+          "desc": "Reserved slot for the final academic and professional portfolio.",
+          "icon": "microscope"
         }
       ]
     }
