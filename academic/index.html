@@ -373,10 +373,14 @@ function renderCourseMap() {
                   if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
                     return `${labelHtml}<div class="image-wrapper" style="margin-bottom: 1rem;"><img src="${escapeHTML(finalUrl)}" alt="${escapeHTML(resource.label)}" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);" loading="lazy"></div>`;
                   }
-                  if (['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(ext)) {
+                  if (['pdf'].includes(ext)) {
                     const absoluteUrl = finalUrl.startsWith('http') ? finalUrl : 'https://mirazhossain.com' + finalUrl;
-                    finalUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(absoluteUrl) + '&embedded=true';
-                    return `${labelHtml}<div style=\"margin-bottom: 0.5rem; text-align: right;\"><a href=\"${escapeHTML(absoluteUrl)}\" target=\"_blank\" style=\"font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;\">Open original file ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(finalUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
+                    return `${labelHtml}<div style="margin-bottom: 0.5rem; text-align: right;"><a href="${escapeHTML(absoluteUrl)}" target="_blank" style="font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;">Open PDF in new tab ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(absoluteUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
+                  }
+                  if (['doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(ext)) {
+                    const absoluteUrl = finalUrl.startsWith('http') ? finalUrl : 'https://mirazhossain.com' + finalUrl;
+                    const viewerUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absoluteUrl);
+                    return `${labelHtml}<div style="margin-bottom: 0.5rem; text-align: right;"><a href="${escapeHTML(absoluteUrl)}" target="_blank" style="font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;">Download original file ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(viewerUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
                   }
                   return `<a class="course-resource-link" style="margin-top: ${i > 0 ? '1rem' : '0'}" href="${escapeHTML(finalUrl)}" target="_blank" rel="noopener">${escapeHTML(resource.label)} ↗</a>`;
                 }).join('')
@@ -406,7 +410,7 @@ function renderCourseMap() {
   host.innerHTML = sections || '<p class="result-count">No coursework matched that search.</p>';
 }
 
-fetch('/content/academic.json?v=30')
+fetch('/content/academic.json?v=32')
   .then(response => {
     if (!response.ok) throw new Error('Could not load academic content');
     return response.json();
@@ -427,7 +431,7 @@ fetch('/content/academic.json?v=30')
 // Academic record ledger + selected (A+) coursework — built from the same content source.
 (function () {
   function esc(v){return String(v||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));}
-  fetch('/content/academic.json?v=30').then(r=>r.json()).then(data=>{
+  fetch('/content/academic.json?v=32').then(r=>r.json()).then(data=>{
     const groups = data.courseGroups || [];
     let aplus = 0, a = 0, aminus = 0, completed = 0;
     const featured = [];
@@ -480,11 +484,15 @@ fetch('/content/academic.json?v=30')
             if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(ext)) {
                     return `${labelHtml}<div class="image-wrapper" style="margin-bottom: 1rem;"><img src="${escapeHTML(finalUrl)}" alt="${escapeHTML(resource.label)}" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--border);" loading="lazy"></div>`;
                   }
-                  if (['pdf', 'doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(ext)) {
-              const absoluteUrl = finalUrl.startsWith('http') ? finalUrl : 'https://mirazhossain.com' + finalUrl;
-              finalUrl = 'https://docs.google.com/viewer?url=' + encodeURIComponent(absoluteUrl) + '&embedded=true';
-              return `${labelHtml}<div style=\"margin-bottom: 0.5rem; text-align: right;\"><a href=\"${escapeHTML(absoluteUrl)}\" target=\"_blank\" style=\"font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;\">Open original file ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(finalUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
-            }
+                  if (['pdf'].includes(ext)) {
+                    const absoluteUrl = finalUrl.startsWith('http') ? finalUrl : 'https://mirazhossain.com' + finalUrl;
+                    return `${labelHtml}<div style="margin-bottom: 0.5rem; text-align: right;"><a href="${escapeHTML(absoluteUrl)}" target="_blank" style="font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;">Open PDF in new tab ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(absoluteUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
+                  }
+                  if (['doc', 'docx', 'ppt', 'pptx', 'xls', 'xlsx'].includes(ext)) {
+                    const absoluteUrl = finalUrl.startsWith('http') ? finalUrl : 'https://mirazhossain.com' + finalUrl;
+                    const viewerUrl = 'https://view.officeapps.live.com/op/embed.aspx?src=' + encodeURIComponent(absoluteUrl);
+                    return `${labelHtml}<div style="margin-bottom: 0.5rem; text-align: right;"><a href="${escapeHTML(absoluteUrl)}" target="_blank" style="font-size: 0.8rem; color: var(--accent-teal); text-decoration: underline;">Download original file ↗</a></div><div class="iframe-wrapper"><iframe src="${escapeHTML(viewerUrl)}" frameborder="0" title="${escapeHTML(resource.label)}" loading="lazy"></iframe></div>`;
+                  }
             return `<a class="course-resource-link" style="margin-top: ${i > 0 ? '1rem' : '0'}" href="${escapeHTML(finalUrl)}" target="_blank" rel="noopener">${escapeHTML(resource.label)} ↗</a>`;
           }).join('')
         : '<span class="course-resource-placeholder">Work sample pending</span>';
