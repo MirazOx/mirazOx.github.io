@@ -498,7 +498,16 @@
           "workTitle": "The Uncounted Forest",
           "type": "Science communication",
           "desc": "A biodiversity and conservation coursework document on ecological risk, loss, and public communication.",
-          "externalUrl": "/assets/showcase/NSC2282_The_Uncounted_Forest.docx"
+          "resources": [
+            {
+              "label": "Bangladesh Forest (Image)",
+              "url": "/assets/showcase/NSC2282_Bangladesh_Forest.jpg"
+            },
+            {
+              "label": "The Uncounted Forest (PDF)",
+              "url": "/assets/showcase/NSC2282_The_Uncounted_Forest.pdf"
+            }
+          ]
         },
         {
           "code": "NSC4182",
