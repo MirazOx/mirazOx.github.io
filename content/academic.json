@@ -427,20 +427,21 @@
           "tier": "Arts & Humanities",
           "session": "Spring 2025",
           "grade": "A",
-          "workTitle": "Great Expectations & The City of Happiness",
-          "type": "Analytical essays",
-          "desc": "Two humanities coursework essays built around close reading, argument, and philosophical interpretation.",
+          "workTitle": "The City of Happiness",
+          "type": "Analytical essay & Video",
+          "desc": "A humanities coursework project built around close reading, argument, and philosophical interpretation.",
           "icon": "terminal",
           "resources": [
             {
-              "label": "Great Expectations",
-              "url": "/assets/showcase/HUM2111_Great_Expectations.docx"
+              "label": "Video Presentation (YouTube)",
+              "url": "https://youtu.be/YzGNLzEA62Q"
             },
             {
               "label": "The City of Happiness (PDF)",
               "url": "/assets/showcase/HUM2111_The_City_of_Happiness.pdf"
             }
-          ]
+          ],
+          "media": "video"
         },
         {
           "code": "HUM3101",
